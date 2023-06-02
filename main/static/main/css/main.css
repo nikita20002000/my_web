@@ -1,38 +1,73 @@
-body {
-    background:  #181818;
+/* Общая высота документа */
+html{
+    height: 200vh;
+    overflow-x: hidden; ;
 }
 
+/*  Настройки основного тела страницы */
+body {
+    /*background:  #181818;*/
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    background-image: url("https://images.unsplash.com/photo-1684079648623-33a66c60368d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=5201&q=80");
+    background-size: cover;
+    background-position: center center;
+}
+
+/*  Боковая панель целиком */
 aside {
     float: left;
-    background: #181818;
-    width: 23%;
-    padding: 2.5%;
-    height: 100vh;
+    background: #181815;
+    height: 224vh;
+    width: 20%;
     color: #fff;
     border-right: 5px solid #4d4d4d;
 
+
 }
 
+/* Картинка в боковом меню */
 aside img {
-    width: 200px;
+    height: 30vh;
+    width: 20vw;
     float: left;
+    margin: -20px;
 }
 
+/* Никнейм */
 aside .logo {
-    font-size: 40px;
+    display: block;
+    font-size: calc(24px + 10 * (100vw / 1280));
+    size: 20vh;
     font-weight: bold;
-    position: relative;
-    top: -5px;
-}
-aside h3 {
-    margin-top: 50px;
-    font-size: 25px;
+    padding: 3%;
+    margin-top: 30vh;
+    border-top: 5px solid #4d4d4d;
 }
 
+/* Кнопка навигации */
+aside h3 {
+    max-width: 100%;
+    min-width: 100px;
+    margin-right: 20px;
+    margin-top: -10px;
+    margin-left: 20px;
+    font-size: calc(25px + 10 * (100vw / 1280));
+    padding: 3%;
+}
+
+/*  Все элементы навигации списком */
 aside ul {
     list-style: none;
+    float: left;
+    position: sticky;
+    top: 20px;
+
 }
 
+
+/*  Каждый элемент навигации отдельно */
 aside ul li {
     color: #fff;
     display: block;
@@ -48,24 +83,123 @@ aside ul li:hover, aside ul a:hover{
 }
 
 main .features {
-    float: left;
     color: #fff;
-    margin-top: 20px;
     text-align: center;
-    width: 75%;
-    font-size: 50px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    padding-top: 5%;
+    transform-style: inherit;
+    width: 100vw;
+    height: 100vh;
+
 }
 
+
+/* Главный Заголовок */
 main .features h1 {
-    font-size: 50px;
+    font-family: "sans-serif", serif;
+    font-size: 85px;
+
 }
 
-.alert-warning {
-    font-size: 20px;
-    float: left;
-    clear: both;
-    width: 400px;
-    margin: 20px 34%;
-    text-align: left;
+/*Второй заголовок под главным  */
+main .features small {
+    font-family: "sans-serif", serif;
+    font-size: 65px;
+    line-height: 30px;
+}
 
+
+/*Блок с изображением ноутбука*/
+main .features img {
+    min-width: 30vw;
+    min-height: 30vh;
+    max-width: 70vw;
+    max-height: 70vh;
+    margin-top: 40px;
+    border: 5px solid #4d4d4d;
+}
+
+/* Само изображение внутри */
+main .image-center {
+    display: block;
+    margin: auto;
+}
+main .first_block{
+    width: 30%;
+    height: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 200px;
+    float: left;
+    border: 5px solid #4d4d4d;
+}
+
+
+main .first_text{
+    display: block;
+    margin: 20px;
+    font-family: "sans-serif", serif;
+    font-size: 40px;
+    color: #fff;
+    line-height: 50px;
+    text-align: justify;
+}
+
+
+main .second_block{
+    float: right;
+    width: 30%;
+    height: 30%;
+    margin-top: 200px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 5px solid #4d4d4d;
+}
+
+
+main .image_second{
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 70%;
+
+}
+
+main .third_block{
+    float: left;
+    width: 30%;
+    height: 30%;
+    margin-top: 200px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 5px solid #4d4d4d;
+}
+main .image_third {
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 70%;
+}
+
+main .fourth_block {
+    width: 30%;
+    height: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 200px;
+    float: right;
+    border: 5px solid #4d4d4d;
+}
+
+main .second_text{
+    display: block;
+    margin: 20px;
+    font-weight: bold;
+    line-height: 50px;
+    font-family: "sans-serif", serif;
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 1px 1px 10px black;
+    text-align: justify;
 }

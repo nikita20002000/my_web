@@ -1,11 +1,74 @@
-{% extends 'main/layout.html' %}
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+            Обо мне
+    </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/about.css' %}">
 
+    <script src="https://kit.fontawesome.com/29c67175bf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <aside>
+        <img src="{% static 'main/img/progger_cat.PNG' %}" alt="Лого">
+        <span class="logo">NickLovesCats</span>
+        <h3>Навигация</h3>
+        <ul>
+            <a href="{% url 'home' %}"><li><i class="fa-solid fa-house fa-beat"></i> Главная</li></a>
+            <a href="{% url 'about_me' %}"><li><i class="fa-solid fa-user fa-beat"></i> Обо мне</li></a>
+            <a href="{% url 'news_home' %}"><li><i class="fa-solid fa-newspaper fa-beat"></i> Новости</li></a>
+            <a href="{% url 'about_me' %}"><li><i class="fa-solid fa-folder fa-beat"></i> Мои проекты</li></a>
+            <a href="{% url 'about_me' %}"><li><i class="fa-solid fa-list fa-beat"></i> Приложения</li></a>
+            <a href=""><li><i class="fa-solid fa-id-card fa-beat"></i> Контакты</li></a>
+            <a href=""><li><i class="fa-solid fa-circle-dollar-to-slot fa-beat"></i> Помощь и донаты</li></a>
+        </ul>
+         <style>
+            a {
+            text-decoration: none;
+            }
+        </style>
+    </aside>
+    <main>
+        <header>
+            <h1>Обо мне</h1>
+            <p>Меня зовут Никита и мне 23!</p>
+        </header>
 
-{% block title %}
-    Страница обо мне
-{% endblock %}
-
-{% block content %}
-    <h1>Про меня</h1>
-    <p>про меня</p>
-{% endblock %}
+        <table class="f">
+            <tr>
+                <td>
+                    <img src="{% static 'main/img/first_nick.png' %}" alt="">
+                </td>
+                <td>
+                    <h2>
+                       Я закончил Московский Государственный Технический Университет "СТАНКИН" по направлению автоматизации технологических процессов и производств, а на данный момент
+                        обучаюсь в Московском Государственном Университете имени М.В. Ломоносова по направлению искусственного интеллекта. Помимо этого я параллельно обучаюсь по направлению
+                        мастера делового администрирования MBA в МГУ на кафедре Государственного управления
+                    </h2>
+                </td>
+            </tr>}
+            <tr>
+                <td>
+                    <h2>
+                        В университете я увлекался различными дисциплинами связанными с математикой, физиков и анализом данных и с годами, наконец, пришел в программирование. Для меня это что-то большее, чем сфера деятельности
+                        , это скорее то, чем я готов заниматься даже в свое свободное время. На данный момент я развиваюсь в напрвлениях Back-end разработки, Data-science, машинном обучении,
+                        а также верстки сайтов :). Моими основными языками программирования можно считать PYTHON, JAVA и C#
+                    </h2>
+                </td>
+                <td>
+                    <img src="{% static 'main/img/second_nick.png' %}" alt="">
+                </td>
+            </tr>}
+    </table>
+        <div class="lastimg">
+            <img src="{% static 'main/img/third_nick.png' %}" alt="">
+        </div>
+    </main>
+</body>
+</html>

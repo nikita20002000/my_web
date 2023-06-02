@@ -1,12 +1,63 @@
-{% extends 'main/layout.html' %}
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <title>
+            Главная страница
+    </title>
 
-{% block title %}
-    Главная страница
-{% endblock %}
+    <style>
+            a {
+            text-decoration: none;
+            }
+    </style>
 
-{% block content %}
-    <div class="features">
-        <h1>{{ title }}</h1>
-    </div>
-{% endblock %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <script src="https://kit.fontawesome.com/29c67175bf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <aside>
+        <img src="{% static 'main/img/progger_cat.PNG' %}" alt="Лого">
+        <span class="logo">NickLovesCats</span>
+        <h3>Навигация</h3>
+        <ul>
+            <a href="{% url 'home' %}"><li><i class="fa-solid fa-house fa-beat"></i> Главная</li></a>
+            <a href="{% url 'about_me' %}"><li><i class="fa-solid fa-user fa-beat"></i> Обо мне</li></a>
+            <a href="{% url 'news_home' %}"><li><i class="fa-solid fa-newspaper fa-beat"></i> Новости</li></a>
+            <a href="{% url 'about_me' %}"><li><i class="fa-solid fa-folder fa-beat"></i> Мои проекты</li></a>
+            <a href="{% url 'about_me' %}"><li><i class="fa-solid fa-list fa-beat"></i> Приложения</li></a>
+            <a href=""><li><i class="fa-solid fa-id-card fa-beat"></i> Контакты</li></a>
+            <a href=""><li><i class="fa-solid fa-circle-dollar-to-slot fa-beat"></i> Помощь и донаты</li></a>
+        </ul>
+    </aside>
+    <main>
+        <div class="features">
+            <h1>{{ title }}</h1>
+            <small>Эта страница - мой личный блог по программированию</small>
+            <img src="{% static "main/img/Notebook.png" %}" alt="" class="image-center">
+        </div>
+        <div class="first_block">
+            <p class="first_text">
+                Это мой первый опыт разработки ВЕБ-приложений. Я искренне верю в то, что данный веб-сайт вам понравится и, помимо этого, сможет принести пользу и приятные визуальные впечатления
+            </p>
+        </div>
+        <div class="second_block">
+            <img src="{% static 'main/img/fingers_first.png' %}" alt="" class="image_second">
+        </div>
+
+        <div class="third_block">
+            <img src="{% static 'main/img/fingers_second.png' %}" alt="" class="image_third">
+        </div>
+        <div class="fourth_block">
+            <p class="second_text">
+                На странице вы найдете различную информацию обо мне, о моих проектах, различные новости и гайды, связанные с программированием. Помимо этого, на странице будет целый раздел с различнымы приложениями, который будет периодически пополняться новыми прогами
+            </p>
+        </div>
+    </main>
+</body>
+</html>

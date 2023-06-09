@@ -21,43 +21,109 @@
     <script src="https://kit.fontawesome.com/29c67175bf.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <aside>
-        <img src="{% static 'main/img/progger_cat.PNG' %}" alt="Лого">
-        <span class="logo">NickLovesCats</span>
-        <h3>Навигация</h3>
-        <ul>
-            <a href="{% url 'home' %}"><li><i class="fa-solid fa-house fa-beat"></i> Главная</li></a>
-            <a href="{% url 'about_me' %}"><li><i class="fa-solid fa-user fa-beat"></i> Обо мне</li></a>
-            <a href="{% url 'news_home' %}"><li><i class="fa-solid fa-newspaper fa-beat"></i> Новости</li></a>
-            <a href="{% url 'about_me' %}"><li><i class="fa-solid fa-folder fa-beat"></i> Мои проекты</li></a>
-            <a href="{% url 'about_me' %}"><li><i class="fa-solid fa-list fa-beat"></i> Приложения</li></a>
-            <a href=""><li><i class="fa-solid fa-id-card fa-beat"></i> Контакты</li></a>
-            <a href=""><li><i class="fa-solid fa-circle-dollar-to-slot fa-beat"></i> Помощь и донаты</li></a>
-        </ul>
-    </aside>
-    <main>
-        <div class="features">
-            <h1>{{ title }}</h1>
-            <small>Эта страница - мой личный блог по программированию</small>
-            <img src="{% static "main/img/Notebook.png" %}" alt="" class="image-center">
-        </div>
-        <div class="first_block">
-            <p class="first_text">
-                Это мой первый опыт разработки ВЕБ-приложений. Я искренне верю в то, что данный веб-сайт вам понравится и, помимо этого, сможет принести пользу и приятные визуальные впечатления
-            </p>
-        </div>
-        <div class="second_block">
-            <img src="{% static 'main/img/fingers_first.png' %}" alt="" class="image_second">
-        </div>
+    <div class="page">
+        <aside>
+            <img src="{% static 'main/img/cat_gif.gif' %}" alt="Лого">
 
-        <div class="third_block">
-            <img src="{% static 'main/img/fingers_second.png' %}" alt="" class="image_third">
-        </div>
-        <div class="fourth_block">
-            <p class="second_text">
-                На странице вы найдете различную информацию обо мне, о моих проектах, различные новости и гайды, связанные с программированием. Помимо этого, на странице будет целый раздел с различнымы приложениями, который будет периодически пополняться новыми прогами
+
+            <ul>
+                <a href="{% url 'home' %}"><li><i class="fa-solid fa-house fa-beat-fade"></i> main()</li></a>
+                <a href="{% url 'about_me' %}"><li><i class="fa-regular fa-user fa-beat-fade"></i> README</li></a>
+                <a href="{% url 'news_home' %}"><li><i class="fa-solid fa-newspaper fa-beat-fade"></i> news</li></a>
+                <a href="{% url 'about_me' %}"><li><i class="fa-solid fa-folder fa-beat-fade"></i> my_repo</li></a>
+                <a href="{% url 'about_me' %}"><li><i class="fa-solid fa-list fa-beat-fade"></i> apps</li></a>
+                <a href=""><li><i class="fa-regular fa-id-card fa-beat-fade"></i> contacts</li></a>
+                <a href=""><li><i class="fa-solid fa-circle-dollar-to-slot fa-beat-fade"></i> -h</li></a>
+            </ul>
+            <style>
+                a {
+                text-decoration: none;
+                }
+            </style>
+        </aside>
+
+        <main>
+            <div class="features">
+                <h1 id="nickname">
+                    nick_loves_cats
+                </h1>
+            </div>
+            <div class="main_info">
+                <img src="{% static 'main/img/main_page_neither.png' %}" alt="">
+                <p id="main_text_1">
+                    Привет! Я рад приветствовать тебя на моей собственной ВЕБ-странице. Здесь представлено множество возможностей и функций, которые в будущем будут совершенствоваться и пополнятся. Мой блог от начала и до конца посвящен программированию!<br>
+                    <br>
+                    <br>
+
+                    ( ° ∀ ° )ﾉﾞ
+                </p>
+                <p id="main_text_2">
+                    Что внутри
+                </p>
+            </div>
+            <div class="info_1">
+                <img src="{% static 'main/img/win_sys_er.png' %}" alt="">
+                <p id="ab_me_in">
+                    Информация обо мне
+                </p>
+                <p id="ab_me_in_text">
+                    В разделе README вы найдете информацию обо мне, моем образовании и увлечениях!
+                </p>
+            </div>
+            <div class="info_2">
+                <p id="news_in_text">
+                    Раздел news будет постоянно пополняться различными гайдами, советами и новостями по по программированию, а также по моим нынешним проектам!
+                </p>
+                <img src="{% static 'main/img/win_sys_er.png' %}" alt="">
+                <p id="news_in">
+                    Новости и обновления
+                </p>
+            </div>
+            <div class="info_3">
+                <img src="{% static 'main/img/win_sys_er.png' %}" alt="">
+                <p id="repo">
+                    Мои проекты
+                </p>
+                <p id="repo_in_text">
+                    my_repo посвящен всем моим нынешним и будущим проектам. Здесь будет отображаться информация по текущим репозиториям с объяснением их работы и ссылками на Github
+                </p>
+            </div>
+            <div class="info_4">
+                <p id="apps_in_text">
+                    В этом разделе вы найдете все доступные функции и приложения. Игры, обработка текста и многое другое ждут вас в этом разделе!
+                </p>
+                <img src="{% static 'main/img/win_sys_er.png' %}" alt="">
+                <p id="apps_in">
+                    Приложения
+                </p>
+            </div>
+            <div class="info_5">
+                <img src="{% static 'main/img/win_sys_er.png' %}" alt="">
+                <p id="contacts">
+                    Контакты
+                </p>
+                <p id="contacts_in_text">
+                    В разделе contacts есть вся информация для связи со мной. Хотите сотрудничать?! Вам сюда!
+                </p>
+            </div>
+            <div class="info_6">
+                <p id="h_in_text">
+                    Я просто должен был сделать эту вкладку... Она ни к чему не обязывает, но претендует на существование :)
+                </p>
+                <img src="{% static 'main/img/win_sys_er.png' %}" alt="">
+                <p id="h_in">
+                    Помощь и донаты
+                </p>
+            </div>
+            <div class="final_cat_png">
+                <img src="{% static 'main/img/cat_with_pc_gif.gif' %}" alt="">
+            </div>
+        </main>
+    </div>
+        <footer class="page_end">
+            <p>
+                © 2023 nick_loves_cats. All rights reserved.
             </p>
-        </div>
-    </main>
+        </footer>
 </body>
 </html>

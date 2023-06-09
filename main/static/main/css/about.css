@@ -1,111 +1,111 @@
-html {
+/* Общая высота документа */
+html{
+    overflow-x: hidden; ;
+}
+
+/*  Настройки основного тела страницы */
+body {
+    background-color: #dbcffb;
+    margin: 0;
+    padding: 0;
+
+    background-position: center center;
+}
+
+/*  Боковая панель целиком */
+aside {
+    float: left;
+    background-color: #dbcffb;
+    width: 20%;
+    padding: 2.5%;
+
+    min-height: 467vh;
+    max-height: 700vh;
+    color: #5757e5;
+    border-right: 3px solid #5757e5;
+}
+
+/* Картинка в боковом меню */
+aside img {
+    margin-right: 10%;
+    width: 80%;
+    float: left;
+}
+
+
+/* Кнопка навигации */
+Кнопка навигации
+aside h3 {
+    margin-top: -400px;
+    max-width: 100%;
+    min-width: 50px;
+    border: 2px solid #5757e5;
+}
+
+/*  Все элементы навигации списком */
+aside ul {
+
+    list-style: none;
+    float: left;
+    position: sticky;
+    top: 20px;
+    /*border: 2px solid #5757e5;*/
+}
+
+
+/*  Каждый элемент навигации отдельно */
+aside ul li {
+    color: #5757e5;
+    display: block;
+    margin-top: 20px;
+    font-family: "amstrad";
+    font-size: 1.5vw;
+
+    transition: transform .6s ease;
+
+}
+
+aside ul li:hover, aside ul a:hover{
+    color: #5757e5;
+    text-decoration: none;
+    transform: scale(1.10);
+}
+
+main {
     height: 100%;
 }
 
-body {
-    background:  #181818;
-    margin: 0;
-    padding: 0;
-    perspective: 1px;
-    transform-style: preserve-3d;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-
-aside {
+.features {
     float: left;
-    background: #181818;
-    width: 23%;
-    padding: 2.5%;
-    height: 1610px;
-    color: #fff;
-    border-right: 5px solid #4d4d4d;
+    display: flex;
+    justify-content: center;
+
+    color: #5757e5;
+    margin-top: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 70%;
 
 }
 
-aside img {
-    width: 200px;
-    height: auto;
-    float: left;
+.features img{
+    justify-content: center;
+    margin-top: 40px;
+    /*margin-left: 5%;*/
+    /*margin-right: 5%;*/
+    width: 35vw;
 }
 
-aside .logo {
-    font-size: 40px;
-    font-weight: bold;
-    position: relative;
-    top: -5px;
+@font-face {
+    font-family: "amstrad";
+    src: url("../fonts/amstrad/amstrad.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }
-aside h3 {
-    margin-top: 50px;
-    font-size: 25px;
-    height: auto;
-    width: auto;
-}
-
-aside ul {
-    list-style: none;
-}
-
-aside ul li {
-    color: #fff;
-    display: block;
-    margin-top: 20px;
-    font-size: 20px;
-    transition: transform .6s ease;
-}
-
-aside ul li:hover, aside ul a:hover {
-  color: #008B8B;
-  text-decoration: none;
-  transform: scale(1.10);
-}
-main header {
-    font-family: "American Typewriter", serif;
-    font-size: 75px;
-}
-main img {
-  width: 100%;
-  max-height: 150%;
-  float: right;
-  margin-left: -60px;
-
+@font-face {
+    font-family: "rus_amstrad";
+    src: url("../fonts/rus_amstrad/rus_amstrad.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
 
 }
-main h1 {
-  font-family: "American Typewriter", serif;
-  font-size: 50px;
-  position: center;
-  margin: auto auto 40px;
-  color: #fff;
-}
-
-
-main td{
-  width: 50%;
-}
-main h2 {
-  font-family: "sans-serif", serif;
-  font-size: 22px;
-  margin-right: 40px;
-  margin-left: 40px;
-  color: #fff;
-  line-height: 40px;
-  text-align: justify;
-
-}
-main p {
-  font-size: 18px;
-  font-family: "sans-serif", serif;
-  color: #fff;
-}
-
-
-div img {
-  width: 40em;
-  margin-left: 40px;
-  margin-right: auto;
-
-}
-
-

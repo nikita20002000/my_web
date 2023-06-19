@@ -123,7 +123,7 @@ main {
     margin-left: 8%;
     margin-right: 8%;
     position: absolute;
-    top: 25%;
+    top: 15%;
     height: 20%;
     font-family: "rus_amstrad";
     line-height: 45px;
@@ -164,19 +164,18 @@ main {
 #ab_me_in {
     width: 50%;
     text-align: center;
-
     position: absolute;
     top: 28%;
-
     font-family: "rus_amstrad", serif;
-    font-size: 3vw;
+    font-size: 1.5vw;
 }
 
 
 
 #ab_me_in_text {
     float: right;
-    margin-top: 8%;
+    margin-top: 3%;
+    margin-bottom: 5%;
     width: 45%;
     margin-left: 5%;
     font-family: "rus_amstrad", serif;
@@ -206,7 +205,8 @@ main {
 
 #news_in_text {
     float: left;
-    margin-top: 8%;
+    margin-top: 3%;
+    margin-bottom: 5%;
     width: 45%;
     font-family: "rus_amstrad", serif;
     font-size: 16px;
@@ -219,11 +219,11 @@ main {
     width: 50%;
     text-align: center;
     position: absolute;
-    top: 28%;
+    top: 20%;
     left: 50%;
 
     font-family: "rus_amstrad", serif;
-    font-size: 16px;
+    font-size: 1.5vw;
 }
 
 
@@ -250,10 +250,10 @@ main {
     text-align: center;
 
     position: absolute;
-    top: 28%;
+    top: 20%;
 
     font-family: "rus_amstrad", serif;
-    font-size: 16px;
+    font-size: 1.5vw;
 }
 
 
@@ -301,11 +301,11 @@ main {
     width: 50%;
     text-align: center;
     position: absolute;
-    top: 28%;
+    top: 20%;
     left: 50%;
 
     font-family: "rus_amstrad", serif;
-    font-size: 16px;
+    font-size: 1.5vw;
 }
 
 .info_5 {
@@ -331,10 +331,10 @@ main {
     text-align: center;
 
     position: absolute;
-    top: 28%;
+    top: 20%;
 
     font-family: "rus_amstrad", serif;
-    font-size: 16px;
+    font-size: 1.5vw;
 }
 
 
@@ -382,11 +382,11 @@ main {
     width: 50%;
     text-align: center;
     position: absolute;
-    top: 28%;
+    top: 20%;
     left: 50%;
 
     font-family: "rus_amstrad", serif;
-    font-size: 16px;
+    font-size: 1.5vw;
 }
 
 .final_cat_png {
@@ -415,9 +415,9 @@ footer {
     float: left;
     color: #5757e5;
     margin-top: 80px;
-    margin-left: 20%;
 
-    width: 60%;
+
+    width: 100%;
     position: center;
 }
 

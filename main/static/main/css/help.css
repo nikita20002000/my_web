@@ -1,0 +1,159 @@
+/* Общая высота документа */
+html{
+    overflow-x: hidden; ;
+}
+
+/*  Настройки основного тела страницы */
+body {
+    background-color: #dbcffb;
+    margin: 0;
+    padding: 0;
+
+    background-position: center center;
+}
+
+/*  Боковая панель целиком */
+aside {
+    float: left;
+    background-color: #dbcffb;
+    width: 20%;
+    padding: 2.5%;
+
+    min-height: 467vh;
+    max-height: 700vh;
+    color: #5757e5;
+    border-right: 3px solid #5757e5;
+}
+
+/* Картинка в боковом меню */
+aside img {
+    margin-right: 10%;
+    width: 80%;
+    float: left;
+}
+
+
+/* Кнопка навигации */
+Кнопка навигации
+aside h3 {
+    margin-top: -400px;
+    max-width: 100%;
+    min-width: 50px;
+    border: 2px solid #5757e5;
+}
+
+/*  Все элементы навигации списком */
+aside ul {
+
+    list-style: none;
+    float: left;
+    position: sticky;
+    top: 20px;
+    /*border: 2px solid #5757e5;*/
+}
+
+
+/*  Каждый элемент навигации отдельно */
+aside ul li {
+    color: #5757e5;
+    display: block;
+    margin-top: 20px;
+    font-family: "amstrad";
+    font-size: 1.5vw;
+
+    transition: transform .6s ease;
+
+}
+
+aside ul li:hover, aside ul a:hover{
+    color: #5757e5;
+    text-decoration: none;
+    transform: scale(1.10);
+}
+
+main {
+    height: 100%;
+}
+
+
+
+@keyframes sway {
+        0% {
+                transform: rotateZ(-15deg) rotateX(55deg);
+        }
+    30% {
+                transform: rotateZ(20deg) rotateX(60deg);
+                animation-timing-function: ease-in-out;
+        }
+        60% {
+                transform: rotateZ(-20deg) rotateX(55deg);
+                animation-timing-function: ease-in-out;
+        }
+    100% {
+                transform: rotateZ(0deg) rotateX(58deg);
+                animation-timing-function: cubic-bezier(0.990, 0.000, 0.890, 0.435);
+                }
+}
+@keyframes fall {
+        60% {
+                filter: drop-shadow(0px 60px 40px rgba(0,0,0,0));
+        }
+        100% {
+                margin-top: 500px;
+                filter: drop-shadow(0px 5px 8px rgba(0,0,0,0.6));
+        }
+}
+div#autumn-container {
+        width: 768px;
+        height: 400px;
+        border: 1px solid #000;
+        overflow: hidden;
+        position: relative;
+        perspective: 1800px;
+        }
+img[alt="autumn leaf"] {
+        position: absolute;
+        width: 33%;
+        transform-origin: 0px -400px 0px;
+        animation-name: fall, sway;
+        animation-duration: 7s, 8s;
+        animation-fill-mode: both;
+        animation-timing-function: linear, ease-in-out;
+}
+
+
+footer {
+    float: left;
+    color: #5757e5;
+    margin-top: 80px;
+
+
+    width: 100%;
+    position: center;
+}
+
+footer p {
+    font-family: amstrad;
+    text-align: right ;
+}
+
+
+
+
+
+
+
+@font-face {
+    font-family: "amstrad";
+    src: url("../fonts/amstrad/amstrad.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "rus_amstrad";
+    src: url("../fonts/rus_amstrad/rus_amstrad.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+
+}
+

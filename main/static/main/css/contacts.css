@@ -79,7 +79,7 @@ main {
 .features {
     float: left;
     color: #5757e5;
-    margin-top: 5%;
+    margin-top: 4vh;
     margin-left: 5%;
     margin-right: 5%;
     width: 70%;
@@ -89,143 +89,65 @@ main {
 .features img{
     justify-content: center;
 
-    width: 40vw;
+    width: 70vw;
     height: 40vh;
 
 }
 
 
 .features h1 {
-    margin-top: 10vh;
+    margin-top: 2vh;
     font-family: "rus_amstrad";
     margin-right: 5%;
 }
 
 
-.info_ab_me_1 {
+.main_contacts {
     float: left;
     color: #5757e5;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 10vh;
+    margin: 4vh 5% 4vh;
     width: 70%;
     font-family: "amstrad";
+    font-family: "rus_amstrad";
+    box-shadow: 0 0 0 6px #5757e5, 0 0 0 8px #dbcffb, 0 0 0 20px #5757e5;
+}
+
+
+#intro_cont {
+    margin: 2vh 10% 1vh 5%;
+    font-size: 1.4vw;
+    text-align: justify;
+    line-height: 2vh;
+}
+
+#contacts_content {
+    margin: 2vh 10% 4vh 5%;
+    font-size: 1.4vw;
+    line-height: 4vh;
+    text-align: justify;
+}
+
+
+.send_email {
+    float: left;
+    color: #5757e5;
+    margin: 40px 5% 4vh;
+    width: 70%;
+    font-family: "amstrad";
+    font-family: "rus_amstrad";
+    box-shadow: 0 0 0 6px #5757e5, 0 0 0 8px #dbcffb, 0 0 0 20px #5757e5;
     position: relative;
 }
 
-.info_ab_me_1 img{
-    width: 50%;
-    height: 60%;
-
-}
-
-.info_ab_me_1 p{
+.send_email img {
     float: right;
-    margin-top: 80px;
-    width: 45%;
-    margin-left: 5%;
-    font-family: "rus_amstrad", serif;
-    font-size: 16px;
-    text-align: justify;
-    line-height: 25px;
+    height: 10vh;
+    width: 10vw;
+    margin-top: -10vh;
+    margin-right: 2vw;
 }
 
 
-
-.info_ab_me_2 {
-    float: left;
-    color: #5757e5;
-    margin-top: 80px;
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 70%;
-    font-family: "rus_amstrad";
-    position: relative;
-}
-
-.info_ab_me_2 p{
-    float: left;
-    width: 45%;
-    margin-left: 5%;
-    font-family: "rus_amstrad", serif;
-    font-size: 16px;
-    text-align: justify;
-    line-height: 25px;
-}
-
-
-.info_ab_me_2 img{
-    width: 50%;
-    height: 60%;
-
-}
-
-
-
-
-#final_text{
-    font-family: "rus_amstrad", serif;
-    float: left;
-    color: #5757e5;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 15vh;
-    width: 70%;
-    text-align: justify;
-}
-
-.wrapper{
-    float: left;
-    color: #5757e5;
-    margin-top: 60px;
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 70%;
-    justify-content: center;
-}
-
-.wrapper a{
-    display: block;
-    width: 20vw;
-    justify-content: center;
-    height: 7vh;
-    line-height: 40px;
-    font-size: 18px;
-    font-family: "rus_amstrad";
-    text-decoration: none;
-    color: #5757e5;
-    border: 2px solid #5757e5;
-    letter-spacing: 2px;
-    text-align: center;
-    position: relative;
-    transition: all .35s;
-    margin-left: 35%;
-}
-
-.wrapper a span{
-  position: relative;
-    justify-content: center;
-  z-index: 2;
-}
-
-.wrapper a:after{
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #5757e5;
-  transition: all .35s;
-}
-
-.wrapper a:hover{
-  color: #fff;
-}
-
-.wrapper a:hover:after{
-  width: 100%;
-}
 
 
 footer {

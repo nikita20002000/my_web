@@ -21,7 +21,8 @@
     <script src="https://kit.fontawesome.com/29c67175bf.js" crossorigin="anonymous"></script>
 </head>
 <body>
-        <aside>
+    <div class="right">
+            <aside>
             <img src="{% static 'main/img/cat_gif.gif' %}" alt="Лого">
 
 
@@ -29,11 +30,11 @@
                 <a href="{% url 'home' %}"><li><i class="fa-solid fa-house fa-beat-fade"></i> main()</li></a>
                 <a href="{% url 'about_me' %}"><li><i class="fa-regular fa-user fa-beat-fade"></i> README</li></a>
                 <a href="{% url 'news_home' %}"><li><i class="fa-solid fa-newspaper fa-beat-fade"></i> news</li></a>
-                <a href="{% url 'about_me' %}"><li><i class="fa-solid fa-folder fa-beat-fade"></i> my_repo</li></a>
-                <a href="{% url 'about_me' %}"><li><i class="fa-solid fa-list fa-beat-fade"></i> apps</li></a>
+                <a href="{% url 'repos' %}"><li><i class="fa-solid fa-folder fa-beat-fade"></i> my_repo</li></a>
+                <a href="{% url 'apps' %}"><li><i class="fa-solid fa-list fa-beat-fade"></i> apps</li></a>
                 <a href="{% url 'pixel_town' %}"><li><i class="fa-solid fa-heart fa-beat"></i> pixel_town</li></a>
                 <a href="{% url 'contact_page' %}"><li><i class="fa-regular fa-id-card fa-beat-fade"></i> contacts</li></a>
-                <a href=""><li><i class="fa-solid fa-circle-dollar-to-slot fa-beat-fade"></i> -h</li></a>
+                <a href="{% url 'help_me' %}"><li><i class="fa-solid fa-circle-dollar-to-slot fa-beat-fade"></i> -h</li></a>
             </ul>
             <style>
                 a {
@@ -41,46 +42,45 @@
                 }
             </style>
         </aside>
-    <main>
-        <div class="features">
-            <img src="{% static 'main/img/retro_pc_README.gif' %}" alt="">
-            <h1>
-                Обо мне
-            </h1>
-        </div>
-
-        <div class="info_ab_me_1">
-            <img src="{% static 'main/img/first_nick_gif.gif' %}" alt="">
-            <p>
-                Я закончил Московский Государственный Технический Университет "СТАНКИН" по направлению автоматизации технологических процессов и производств, а на данный момент
-                обучаюсь в Московском Государственном Университете имени М.В. Ломоносова по направлению искусственного интеллекта. Помимо этого я параллельно обучаюсь по направлению
-                мастера делового администрирования MBA в МГУ на кафедре Государственного управления
-            </p>
-        </div>
-
-        <div class="info_ab_me_2">
-            <p>
-                В университете я увлекался различными дисциплинами связанными с математикой, физикой и анализом данных и с годами, наконец, пришел в программирование. Для меня это что-то большее, чем сфера деятельности
-                , это скорее то, чем я готов заниматься даже в свое свободное время. На данный момент я развиваюсь в напрвлениях Back-end разработки, Data-science, машинном обучении,
-                а также верстки сайтов :). Моими основными языками программирования можно считать PYTHON, JAVA и C#
-            </p>
-            <img src="{% static 'main/img/second_nick_gif.gif' %}" alt="">
-        </div>
-
-
-        <p id="final_text">
-            Я постоянно прокачиваю свои навыки программирования, изучаю что-то новое, читаю техническую литературу. Каждая решенная задача мотивирует меня заниматься этим делом дальше и совершенствоваться все больше и больше. Ниже вы можете скачать и ознакомиться с моим резюме
-        </p>
-
-        <div class="wrapper">
-            <a href="{% static 'main/files/nov_n.pdf' %}" download><span>Скачать резюме</span></a>
-        </div>
-
-    </main>
-        <footer class="page_end">
-            <p>
+            <main>
+                <div class="features">
+                    <img src="{% static 'main/img/retro_pc_README.gif' %}" alt="">
+                    <h1>
+                        Обо мне
+                    </h1>
+                </div>
+                <div class="info_ab_me_1">
+                    <img src="{% static 'main/img/first_nick_gif.gif' %}" alt="">
+                    <div class="main_text1">
+                        <p>
+                               Я закончил Московский Государственный Технический Университет "СТАНКИН" по направлению автоматизации технологических процессов и производств, а на данный момент
+                            обучаюсь в Московском Государственном Университете имени М.В. Ломоносова по направлению искусственного интеллекта. Помимо этого я параллельно обучаюсь по направлению
+                            мастера делового администрирования MBA в МГУ на кафедре Государственного управления
+                        </p>
+                    </div>
+                </div>
+                <div class="info_ab_me_2">
+                    <div class="main_text2">
+                        <p>
+                            В университете я увлекался различными дисциплинами связанными с математикой, физикой и анализом данных и с годами, наконец, пришел в программирование. Для меня это что-то большее, чем сфера деятельности
+                            , это скорее то, чем я готов заниматься даже в свое свободное время. На данный момент я развиваюсь в напрвлениях Back-end разработки, Data-science, машинном обучении,
+                            а также верстки сайтов :). Моими основными языками программирования можно считать PYTHON, JAVA и C#
+                        </p>
+                    </div>
+                    <img src="{% static 'main/img/second_nick_gif.gif' %}" alt="">
+                </div>
+                <p id="final_text">
+                    Я постоянно прокачиваю свои навыки программирования, изучаю что-то новое, читаю техническую литературу. Каждая решенная задача мотивирует меня заниматься этим делом дальше и совершенствоваться все больше и больше. Ниже вы можете скачать и ознакомиться с моим резюме
+                </p>
+                <div class="wrapper">
+                    <a href="{% static 'main/files/nov_n.pdf' %}" download><span>Скачать резюме</span></a>
+                </div>
+                <footer class="page_end">
+                    <p>
                 © 2023 nick_loves_cats. All rights reserved.
             </p>
-        </footer>
+                </footer>
+            </main>
+    </div>
 </body>
 </html>

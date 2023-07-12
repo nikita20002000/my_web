@@ -6,5 +6,7 @@ urlpatterns = [
     path('about', views.about, name='about_me'),
     path('contacts', views.contacts, name='contact_page'),
     path('pixel_town', views.pixel_town, name='pixel_town'),
-    path('help', views.help_me, name='help_me')
+    path('help', views.help_me, name='help_me'),
+    path('repo', views.my_repos, name='repos'),
+    path('apps', views.apps, name='apps'),
 ]

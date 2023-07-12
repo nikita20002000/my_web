@@ -21,6 +21,7 @@
     <script src="https://kit.fontawesome.com/29c67175bf.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="right">
         <aside>
             <img src="{% static 'main/img/cat_gif.gif' %}" alt="Лого">
 
@@ -29,11 +30,11 @@
                 <a href="{% url 'home' %}"><li><i class="fa-solid fa-house fa-beat-fade"></i> main()</li></a>
                 <a href="{% url 'about_me' %}"><li><i class="fa-regular fa-user fa-beat-fade"></i> README</li></a>
                 <a href="{% url 'news_home' %}"><li><i class="fa-solid fa-newspaper fa-beat-fade"></i> news</li></a>
-                <a href="{% url 'about_me' %}"><li><i class="fa-solid fa-folder fa-beat-fade"></i> my_repo</li></a>
-                <a href="{% url 'about_me' %}"><li><i class="fa-solid fa-list fa-beat-fade"></i> apps</li></a>
+                <a href="{% url 'repos' %}"><li><i class="fa-solid fa-folder fa-beat-fade"></i> my_repo</li></a>
+                <a href="{% url 'apps' %}"><li><i class="fa-solid fa-list fa-beat-fade"></i> apps</li></a>
                 <a href="{% url 'pixel_town' %}"><li><i class="fa-solid fa-heart fa-beat"></i> pixel_town</li></a>
                 <a href="{% url 'contact_page' %}"><li><i class="fa-regular fa-id-card fa-beat-fade"></i> contacts</li></a>
-                <a href=""><li><i class="fa-solid fa-circle-dollar-to-slot fa-beat-fade"></i> -h</li></a>
+                <a href="{% url 'help_me' %}"><li><i class="fa-solid fa-circle-dollar-to-slot fa-beat-fade"></i> -h</li></a>
             </ul>
             <style>
                 a {
@@ -41,39 +42,40 @@
                 }
             </style>
         </aside>
-    <main>
-        <div class="features">
-            <img src="{% static 'main/img/sending_info.gif' %}" alt="" title="Тут просто картинка :0">
-            <h1>
-                Контакты
-            </h1>
-        </div>
-        <div class="main_contacts">
-            <h2 id="intro_cont">
-              У вас есть какие-либо идеи для сотрудничества или вы по каким-то причинам хотите связаться со мной, ниже есть все способы для связи
-            </h2>
-            <p id="contacts_content">
-                 GitHub: <a href="https://github.com/nikita20002000" target="_blank" style="color: darkblue">https://github.com/nikita20002000</a><br>
-                 Telegram: <a href="" style="color: darkblue">@nikita_vse_po_plany</a><br>
-                 VK: <a href="https://vk.com/nikita_vse_kupleno" target="_blank" style="color: darkblue">https://vk.com/nikita_vse_kupleno</a><br>
-                 Instagram: <a href="https://instagram.com/bling_blank?igshid=OGQ5ZDc2ODk2ZA==" style="color: darkblue">bling_blank</a> <br>
+        <main>
+            <div class="features">
+                <img src="{% static 'main/img/sending_info.gif' %}" alt="" title="Тут просто картинка :0">
+                <h1>
+                    Контакты
+                </h1>
+            </div>
+            <div class="main_contacts">
+                <h2 id="intro_cont">
+                  У вас есть какие-либо идеи для сотрудничества или вы по каким-то причинам хотите связаться со мной, ниже есть все способы для связи
+                </h2>
+                <p id="contacts_content">
+                     GitHub: <a href="https://github.com/nikita20002000" target="_blank" style="color: darkblue">https://github.com/nikita20002000</a><br>
+                     Telegram: <a href="" style="color: darkblue">@nikita_vse_po_plany</a><br>
+                     VK: <a href="https://vk.com/nikita_vse_kupleno" target="_blank" style="color: darkblue">https://vk.com/nikita_vse_kupleno</a><br>
+                     Instagram: <a href="https://instagram.com/bling_blank?igshid=OGQ5ZDc2ODk2ZA==" style="color: darkblue">bling_blank</a> <br>
 
-            </p>
-        </div>
-        <div class="send_email">
-            <h2 id="intro_cont">
-              Написать на почту
-            </h2>
-            <h3 id="contacts_content">
-                <a href="mailto:my@vertihost.ru" style="color: darkblue">my@vertihost.ru</a>
-            </h3>
-            <img src="{% static 'main/img/email_gif.gif' %}" alt="" title="Тут просто картинка :0">
-        </div>
-    </main>
-        <footer class="page_end">
-            <p>
-                © 2023 nick_loves_cats. All rights reserved.
-            </p>
-        </footer>
+                </p>
+            </div>
+            <div class="send_email">
+                <h2 id="intro_cont">
+                  Написать на почту
+                </h2>
+                <h3 id="contacts_content">
+                    <a href="mailto:my@vertihost.ru" style="color: darkblue">my@vertihost.ru</a>
+                </h3>
+                <img src="{% static 'main/img/email_gif.gif' %}" alt="" title="Тут просто картинка :0">
+            </div>
+            <footer class="page_end">
+                <p>
+                    © 2023 nick_loves_cats. All rights reserved.
+                </p>
+            </footer>
+        </main>
+    </div>
 </body>
 </html>

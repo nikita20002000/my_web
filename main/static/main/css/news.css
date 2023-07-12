@@ -1,26 +1,30 @@
 /* Общая высота документа */
 html{
-    overflow-x: hidden; ;
+    height: max-content;
+    position: relative;
 }
 
 /*  Настройки основного тела страницы */
 body {
+    display: inline-block;
     background-color: #dbcffb;
     margin: 0;
     padding: 0;
+    height: max-content;
+    width: 100%;
+}
 
-    background-position: center center;
+.right {
+    display: flex;
+    height: 100%;
 }
 
 /*  Боковая панель целиком */
-aside {
+ aside {
     float: left;
-    background-color: #dbcffb;
+    background-color: #aa9ad2;
     width: 20%;
-    padding: 2.5%;
-
-    min-height: 467vh;
-    max-height: 700vh;
+    padding: 0 2.5% 2.5% 2.5%;
     color: #5757e5;
     border-right: 3px solid #5757e5;
 }
@@ -34,7 +38,6 @@ aside img {
 
 
 /* Кнопка навигации */
-Кнопка навигации
 aside h3 {
     margin-top: -400px;
     max-width: 100%;
@@ -44,7 +47,6 @@ aside h3 {
 
 /*  Все элементы навигации списком */
 aside ul {
-
     list-style: none;
     float: left;
     position: sticky;
@@ -59,10 +61,8 @@ aside ul li {
     display: block;
     margin-top: 20px;
     font-family: "amstrad";
-    font-size: 1.5vw;
-
+    font-size: 1vw;
     transition: transform .6s ease;
-
 }
 
 aside ul li:hover, aside ul a:hover{
@@ -72,151 +72,96 @@ aside ul li:hover, aside ul a:hover{
 }
 
 main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     height: 100%;
+    width: 100%;
+    flex-shrink: 10;
+
 }
+
+
 .features {
-    float: left;
     color: #5757e5;
     margin-top: 40px;
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 70%;
+    width: 100%;
     font-family: "amstrad";
 
 }
 
 .features img {
-    width: 70vw;
-    height: 40vh;
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: 30%;
 }
 
 .features h1 {
     margin-top: 5vh;
     margin-left: 5%;
     margin-bottom: 5vh;
-    font-size: 3vw;
-    text-align: center;
-    font-family: "rus_amstrad";
-}
-
-.news {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    font-size: 3vw;
-    text-align: center;
-    font-family: "rus_amstrad";
-    height: 100vh;
-    width: 70vw;
-}
-#title_news {
-    margin-top: 3vh;
-    margin-left: 5%;
-    margin-bottom: 3vh;
     font-size: 2vw;
     text-align: center;
     font-family: "rus_amstrad";
 }
 
-#news_intro {
-    margin-top: 3vh;
-    margin-left: 5%;
-    margin-bottom: 3vh;
-    font-size: 1vw;
-    text-align: center;
-    font-family: "rus_amstrad";
-}
 
-#btn_watch {
-    width: 15vw;
-    font-family: "rus_amstrad";
-}
 
 .news_window {
-    float: left;
     color: #5757e5;
-    margin-top: 40px;
-    width: 70%;
-    position: relative;
+    box-shadow: 0 0 0 4px #5757e5, 0 0 0 10px #dbcffb, 0 0 0 20px #5757e5;
+    margin: 8vh 5vw 12vh 5vw;
+    height: 25vh;
+
 }
 
-.news_window img {
-    margin-top: 40px;
-    margin-left: 2%;
-    margin-right: 2%;
-    width: 70vw;
-    height: 30vh;
-}
 
 #title_news {
-    width: 70vw;
-    margin-left: 3vw;
-    position: absolute;
-    top: 9vh;
-    height: 20%;
-    font-family: "rus_amstrad";
+    width: 100%;
+
+    margin-left: 3%;
+
+    font-family: "amstrad", "rus_amstrad";
     line-height: 45px;
     text-align: justify;
-    font-size: 2vw;
+    font-size: 1.2vw;
 }
 
 #news_intro {
-    width: 60vw;
-    margin-left: 3vw;
     margin-right: 8%;
-    position: absolute;
-    top: 14vh;
-    height: 20%;
-    font-family: "rus_amstrad";
+    margin-left: 2%;
+    font-family: "amstrad", "rus_amstrad";
     line-height: 45px;
     text-align: justify;
-    font-size: 1vw;
+    font-size: 0.8vw;
 }
-
-
-#btn_watch {
-    width: 15vw;
-    margin-left: 25vw;
-    margin-right: 22.5vw;
-    position: absolute;
-    top: 24vh;
-    height: 4vh;
-    font-family: "rus_amstrad";
-    line-height: 45px;
-    text-align: justify;
-    font-size: 1.5vw;
-}
-
 
 
 .wrapper{
-    float: left;
+    display: block;
+    margin-left: 65%;
     color: #5757e5;
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 70%;
-    justify-content: center;
+    margin-top: -20vh ;
+    margin-bottom: 12vh;
 }
 
 .wrapper a{
     display: block;
     width: 20vw;
-    justify-content: center;
-    height: 5vh;
+    line-height: 45px;
     text-decoration: none;
     color: #5757e5;
     border: 2px solid #5757e5;
     letter-spacing: 2px;
-    text-align: center;
     position: relative;
     transition: all .35s;
-    margin-left: 35%;
+
 }
 
 .wrapper a span{
     position: relative;
-    justify-content: center;
     z-index: 2;
-    margin-left: 1vw;
 
 }
 
@@ -239,20 +184,52 @@ main {
   width: 100%;
 }
 
+#btn_watch {
+    font-family: "rus_amstrad";
+    line-height: 45px;
+    text-align: center;
+    font-size: 1.5vw;
+}
 
-footer {
+
+
+.cont_description {
     float: left;
     color: #5757e5;
-    margin-top: 80px;
+    margin: 4vh 5% 4vh;
+    font-family: "amstrad";
+    font-family: "rus_amstrad";
+}
 
+.news_name {
+    display: block;
+    margin: 5% auto;
+    color: #5757e5;
+    font-family: "amstrad", "rus_amstrad";
+    font-size: 1.5vw;
+}
 
-    width: 100%;
-    position: center;
+#news_description {
+    line-height: 4vh;
+    text-indent: 2%;
+}
+
+#blank_space {
+    height: 100px;
+    margin-top: 2%;
+}
+
+footer {
+    float: right;
+    color: #5757e5;
+    margin-top: 5%;
+
 }
 
 footer p {
     font-family: amstrad;
     text-align: right ;
+    font-size: 0.8vw
 }
 
 @font-face {

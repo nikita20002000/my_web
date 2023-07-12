@@ -1,26 +1,30 @@
-/* Общая высота документа */
+
+/*  Настройки основного тела страницы */
 html{
-    overflow-x: hidden; ;
+    height: max-content;
+    position: relative;
 }
 
 /*  Настройки основного тела страницы */
 body {
+    display: inline-block;
     background-color: #dbcffb;
     margin: 0;
     padding: 0;
+    height: max-content;
+}
 
-    background-position: center center;
+.right {
+    display: flex;
+    height: 100%;
 }
 
 /*  Боковая панель целиком */
-aside {
+  aside {
     float: left;
-    background-color: #dbcffb;
+    background-color: #aa9ad2;
     width: 20%;
-    padding: 2.5%;
-
-    min-height: 467vh;
-    max-height: 700vh;
+    padding: 0 2.5% 2.5% 2.5%;
     color: #5757e5;
     border-right: 3px solid #5757e5;
 }
@@ -43,7 +47,6 @@ aside h3 {
 
 /*  Все элементы навигации списком */
 aside ul {
-
     list-style: none;
     float: left;
     position: sticky;
@@ -58,10 +61,8 @@ aside ul li {
     display: block;
     margin-top: 20px;
     font-family: "amstrad";
-    font-size: 1.5vw;
-
+    font-size: 1vw;
     transition: transform .6s ease;
-
 }
 
 aside ul li:hover, aside ul a:hover{
@@ -71,7 +72,12 @@ aside ul li:hover, aside ul a:hover{
 }
 
 main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     height: 100%;
+    flex-shrink: 10;
+
 }
 
 
@@ -80,17 +86,15 @@ main {
     float: left;
     color: #5757e5;
     margin-top: 5%;
-    margin-left: 5%;
     margin-right: 5%;
-    width: 70%;
+    width: 100%;
     text-align: center;
 }
 
 .features img{
     justify-content: center;
-
-    width: 40vw;
-    height: 40vh;
+    width: 20%;
+    height: 20%;
 
 }
 
@@ -98,65 +102,75 @@ main {
 .features h1 {
     margin-top: 10vh;
     font-family: "rus_amstrad";
-    margin-right: 5%;
+    font-size: 2.5vw;
 }
 
 
 .info_ab_me_1 {
     float: left;
     color: #5757e5;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 10vh;
-    width: 70%;
+    width: 100%;
+    height: 38%;
     font-family: "amstrad";
     position: relative;
 }
 
 .info_ab_me_1 img{
+    margin-top: 10%;
     width: 50%;
-    height: 60%;
+    height: 50vh;
+    margin-bottom: 10%;
 
 }
 
-.info_ab_me_1 p{
+.main_text1 {
     float: right;
-    margin-top: 80px;
-    width: 45%;
-    margin-left: 5%;
-    font-family: "rus_amstrad", serif;
-    font-size: 16px;
-    text-align: justify;
-    line-height: 25px;
+    margin-top: 20%;
+    width: 50%;
 }
+
+.main_text1 p{
+    margin-right: 10%;
+    font-family: "rus_amstrad", serif;
+    font-size: 0.8vw;
+    text-align: justify;
+    line-height: 3vh;
+    text-indent: 5%;
+}
+
 
 
 
 .info_ab_me_2 {
+    width: 100%;
+    margin-top: -5%;
     float: left;
     color: #5757e5;
-    margin-top: 80px;
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 70%;
+    width: 100%;
     font-family: "rus_amstrad";
     position: relative;
 }
-
-.info_ab_me_2 p{
+.main_text2 {
     float: left;
-    width: 45%;
-    margin-left: 5%;
+    margin-top: 15%;
+    width: 50%;
+}
+
+.main_text2 p{
+    margin-left: 10%;
     font-family: "rus_amstrad", serif;
-    font-size: 16px;
+    font-size: 0.8vw;
     text-align: justify;
-    line-height: 25px;
+    line-height: 3vh;
+    text-indent: 5%;
 }
 
 
 .info_ab_me_2 img{
+    margin-top: 10%;
     width: 50%;
-    height: 60%;
+    height: 50vh;
+    margin-bottom: 10%;
 
 }
 
@@ -165,13 +179,14 @@ main {
 
 #final_text{
     font-family: "rus_amstrad", serif;
-    float: left;
     color: #5757e5;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 15vh;
-    width: 70%;
+    width: 90%;
     text-align: justify;
+    line-height: 3vh;
+    text-indent: 5%;
 }
 
 .wrapper{
@@ -180,7 +195,7 @@ main {
     margin-top: 60px;
     margin-left: 5%;
     margin-right: 5%;
-    width: 70%;
+    width: 100%;
     justify-content: center;
 }
 
@@ -188,7 +203,7 @@ main {
     display: block;
     width: 20vw;
     justify-content: center;
-    height: 7vh;
+
     line-height: 40px;
     font-size: 18px;
     font-family: "rus_amstrad";
@@ -234,7 +249,7 @@ footer {
     margin-top: 80px;
     margin-left: 20%;
 
-    width: 60%;
+    width: 80%;
     position: center;
 }
 

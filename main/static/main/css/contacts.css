@@ -1,26 +1,28 @@
 /* Общая высота документа */
 html{
-    overflow-x: hidden; ;
+    height: max-content;
+    position: relative;
 }
 
 /*  Настройки основного тела страницы */
 body {
+    display: inline-block;
     background-color: #dbcffb;
     margin: 0;
     padding: 0;
-
-    background-position: center center;
+    height: max-content;
+}
+.right {
+    display: flex;
+    height: 100%;
 }
 
 /*  Боковая панель целиком */
 aside {
     float: left;
-    background-color: #dbcffb;
+    background-color: #aa9ad2;
     width: 20%;
-    padding: 2.5%;
-
-    min-height: 467vh;
-    max-height: 700vh;
+    padding: 0 2.5% 2.5% 2.5%;
     color: #5757e5;
     border-right: 3px solid #5757e5;
 }
@@ -43,7 +45,6 @@ aside h3 {
 
 /*  Все элементы навигации списком */
 aside ul {
-
     list-style: none;
     float: left;
     position: sticky;
@@ -58,10 +59,8 @@ aside ul li {
     display: block;
     margin-top: 20px;
     font-family: "amstrad";
-    font-size: 1.5vw;
-
+    font-size: 1vw;
     transition: transform .6s ease;
-
 }
 
 aside ul li:hover, aside ul a:hover{
@@ -71,32 +70,36 @@ aside ul li:hover, aside ul a:hover{
 }
 
 main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     height: 100%;
+    width: 80%;
+
 }
 
 
 
 .features {
-    float: left;
     color: #5757e5;
     margin-top: 4vh;
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 70%;
+
+    width: 100%;
     text-align: center;
 }
 
 .features img{
     justify-content: center;
-
-    width: 70vw;
-    height: 40vh;
+    width: 50%;
+    height: 50%;
+    margin-left: 10%;
+    margin-right: 10%;
 
 }
 
 
 .features h1 {
-    margin-top: 2vh;
+    margin-top: 5vh;
     font-family: "rus_amstrad";
     margin-right: 5%;
 }
@@ -106,7 +109,6 @@ main {
     float: left;
     color: #5757e5;
     margin: 4vh 5% 4vh;
-    width: 70%;
     font-family: "amstrad";
     font-family: "rus_amstrad";
     box-shadow: 0 0 0 6px #5757e5, 0 0 0 8px #dbcffb, 0 0 0 20px #5757e5;
@@ -115,15 +117,14 @@ main {
 
 #intro_cont {
     margin: 2vh 10% 1vh 5%;
-    font-size: 1.4vw;
     text-align: justify;
-    line-height: 2vh;
+    line-height: 4vh;
 }
 
 #contacts_content {
     margin: 2vh 10% 4vh 5%;
-    font-size: 1.4vw;
     line-height: 4vh;
+    font-size: 1vw;
     text-align: justify;
 }
 
@@ -131,8 +132,7 @@ main {
 .send_email {
     float: left;
     color: #5757e5;
-    margin: 40px 5% 4vh;
-    width: 70%;
+    margin: 20vh 5% 4vh;
     font-family: "amstrad";
     font-family: "rus_amstrad";
     box-shadow: 0 0 0 6px #5757e5, 0 0 0 8px #dbcffb, 0 0 0 20px #5757e5;
@@ -141,8 +141,8 @@ main {
 
 .send_email img {
     float: right;
-    height: 10vh;
-    width: 10vw;
+    height: 10%;
+    width: 10%;
     margin-top: -10vh;
     margin-right: 2vw;
 }
@@ -151,18 +151,16 @@ main {
 
 
 footer {
-    float: left;
+    float: right;
     color: #5757e5;
-    margin-top: 80px;
-    margin-left: 20%;
+    margin-top: 5%;
 
-    width: 60%;
-    position: center;
 }
 
 footer p {
     font-family: amstrad;
     text-align: right ;
+    font-size: 0.8vw
 }
 
 

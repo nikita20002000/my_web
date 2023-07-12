@@ -1,26 +1,29 @@
 /* Общая высота документа */
 html{
-    overflow-x: hidden; ;
+    height: max-content;
+    position: relative;
 }
 
 /*  Настройки основного тела страницы */
 body {
+    display: inline-block;
     background-color: #dbcffb;
     margin: 0;
     padding: 0;
+    height: max-content;
+}
 
-    background-position: center center;
+.right {
+    display: flex;
+    height: 100%;
 }
 
 /*  Боковая панель целиком */
-aside {
+ aside {
     float: left;
-    background-color: #dbcffb;
+    background-color: #aa9ad2;
     width: 20%;
-    padding: 2.5%;
-
-    min-height: 467vh;
-    max-height: 700vh;
+    padding: 0 2.5% 2.5% 2.5%;
     color: #5757e5;
     border-right: 3px solid #5757e5;
 }
@@ -34,7 +37,6 @@ aside img {
 
 
 /* Кнопка навигации */
-Кнопка навигации
 aside h3 {
     margin-top: -400px;
     max-width: 100%;
@@ -44,7 +46,6 @@ aside h3 {
 
 /*  Все элементы навигации списком */
 aside ul {
-
     list-style: none;
     float: left;
     position: sticky;
@@ -59,10 +60,8 @@ aside ul li {
     display: block;
     margin-top: 20px;
     font-family: "amstrad";
-    font-size: 1.5vw;
-
+    font-size: 1vw;
     transition: transform .6s ease;
-
 }
 
 aside ul li:hover, aside ul a:hover{
@@ -72,76 +71,120 @@ aside ul li:hover, aside ul a:hover{
 }
 
 main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     height: 100%;
+    flex-shrink: 10;
+
 }
 
 
 
-@keyframes sway {
-        0% {
-                transform: rotateZ(-15deg) rotateX(55deg);
-        }
-    30% {
-                transform: rotateZ(20deg) rotateX(60deg);
-                animation-timing-function: ease-in-out;
-        }
-        60% {
-                transform: rotateZ(-20deg) rotateX(55deg);
-                animation-timing-function: ease-in-out;
-        }
-    100% {
-                transform: rotateZ(0deg) rotateX(58deg);
-                animation-timing-function: cubic-bezier(0.990, 0.000, 0.890, 0.435);
-                }
+
+#particles-js{
+  position: fixed;
+    width: 80%;
+    height: 100%;
+  top: 0;
+  left: 20%;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  overflow: hidden;
 }
-@keyframes fall {
-        60% {
-                filter: drop-shadow(0px 60px 40px rgba(0,0,0,0));
-        }
-        100% {
-                margin-top: 500px;
-                filter: drop-shadow(0px 5px 8px rgba(0,0,0,0.6));
-        }
+
+
+.donate_page {
+
+    color: #5757e5;
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
 }
-div#autumn-container {
-        width: 768px;
-        height: 400px;
-        border: 1px solid #000;
-        overflow: hidden;
-        position: relative;
-        perspective: 1800px;
-        }
-img[alt="autumn leaf"] {
-        position: absolute;
-        width: 33%;
-        transform-origin: 0px -400px 0px;
-        animation-name: fall, sway;
-        animation-duration: 7s, 8s;
-        animation-fill-mode: both;
-        animation-timing-function: linear, ease-in-out;
+
+
+
+.donate_page h1 {
+    margin-top: 6vh;
+    font-family: "rus_amstrad";
+}
+
+.main_donuts {
+    float: left;
+    color: #5757e5;
+    margin: 8vh 5% 4vh 5%;
+    font-family: "amstrad";
+    font-family: "rus_amstrad";
+    box-shadow: 0 0 0 6px #5757e5, 0 0 0 8px #dbcffb, 0 0 0 20px #5757e5;
+}
+
+
+#intro_cont {
+    margin: 2vh 10% 5vh 5%;
+
+    text-align: justify;
+    line-height: 4vh;
+}
+
+#contacts_content {
+    margin: 2vh 10% 4vh 5%;
+    font-size: 1.4vw;
+    line-height: 4vh;
+    text-align: justify;
+}
+
+.counter {
+    float: left;
+    color: #5757e5;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    text-align: center;
+}
+
+
+.counter h2 {
+    margin-top: 2vh;
+    font-size: 2vw;
+    font-family: "rus_amstrad";
+}
+
+#count_cont {
+    float: left;
+    color: #5757e5;
+    margin: 60px 10% 10vh 10%;
+
+    font-family: "amstrad";
+
+    box-shadow: 0 0 0 4px #5757e5, 0 0 0 10px #dbcffb, 0 0 0 20px #5757e5;
+}
+#num {
+    float: right;
+    margin-right: 5%;
+    font-size: 3vw;
+}
+
+
+#blank_space {
+    height: 100px;
 }
 
 
 footer {
-    float: left;
+    float: right;
     color: #5757e5;
-    margin-top: 80px;
+    margin-top: 5%;
 
-
-    width: 100%;
-    position: center;
 }
 
 footer p {
     font-family: amstrad;
     text-align: right ;
+    font-size: 0.8vw
 }
-
-
-
-
-
-
 
 @font-face {
     font-family: "amstrad";

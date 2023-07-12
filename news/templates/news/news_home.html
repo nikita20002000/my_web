@@ -21,20 +21,18 @@
     <script src="https://kit.fontawesome.com/29c67175bf.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="page">
+    <div class="right">
         <aside>
             <img src="{% static 'main/img/cat_gif.gif' %}" alt="Лого">
-
-
             <ul>
-                <a href="{% url 'home' %}"><li><i class="fa-solid fa-house fa-beat-fade"></i> main()</li></a>
+                <<a href="{% url 'home' %}"><li><i class="fa-solid fa-house fa-beat-fade"></i> main()</li></a>
                 <a href="{% url 'about_me' %}"><li><i class="fa-regular fa-user fa-beat-fade"></i> README</li></a>
                 <a href="{% url 'news_home' %}"><li><i class="fa-solid fa-newspaper fa-beat-fade"></i> news</li></a>
-                <a href="{% url 'about_me' %}"><li><i class="fa-solid fa-folder fa-beat-fade"></i> my_repo</li></a>
-                <a href="{% url 'about_me' %}"><li><i class="fa-solid fa-list fa-beat-fade"></i> apps</li></a>
+                <a href="{% url 'repos' %}"><li><i class="fa-solid fa-folder fa-beat-fade"></i> my_repo</li></a>
+                <a href="{% url 'apps' %}"><li><i class="fa-solid fa-list fa-beat-fade"></i> apps</li></a>
                 <a href="{% url 'pixel_town' %}"><li><i class="fa-solid fa-heart fa-beat"></i> pixel_town</li></a>
                 <a href="{% url 'contact_page' %}"><li><i class="fa-regular fa-id-card fa-beat-fade"></i> contacts</li></a>
-                <a href=""><li><i class="fa-solid fa-circle-dollar-to-slot fa-beat-fade"></i> -h</li></a>
+                <a href="{% url 'help_me' %}"><li><i class="fa-solid fa-circle-dollar-to-slot fa-beat-fade"></i> -h</li></a>
             </ul>
             <style>
                 a {
@@ -42,33 +40,32 @@
                 }
             </style>
         </aside>
-            <main>
-                <div class="features">
-                    <img src="{% static 'main/img/news-pic.png' %}" alt="">
-                    <h1 id="NEWS">Новости на сайте</h1>
-                <div class="news">
-                    {% if news %}
-                        {% for el in news %}
-                            <div class="news_window">
-                                <img src="{% static 'main/img/folder_without_back.png' %}" alt="">
-                                <h3 id="title_news">{{ el.title }}</h3>
-                                <p id="news_intro">{{ el.intro }}</p>
-                                <div class="wrapper">
-                                    <a href="{% url 'news_detail' el.id %}"  id="btn_watch"><span>Смотреть</span></a>
-                                </div>
-                            </div>
-                        {% endfor %}
-                    {% else %}
-                        <p>Новостей нет</p>
-                    {% endif %}
-                </div>
-                </div>
-            </main>
+        <main>
+            <div class="features">
+                <img src="{% static 'main/img/news-pic.png' %}" alt="">
+                <h1 id="NEWS">Новости на сайте</h1>
+            <div class="news">
+                {% if news %}
+                    {% for el in news %}
+                        <div class="news_window">
+                            <h3 id="title_news">{{ el.title }}</h3>
+                            <p id="news_intro">{{ el.intro }}</p>
+                        </div>
+                        <div class="wrapper">
+                            <a href="{% url 'news_detail' el.id %}"  id="btn_watch"><span>Смотреть</span></a>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>Новостей нет</p>
+                {% endif %}
             </div>
-                <footer class="page_end">
-                    <p>
-                        © 2023 nick_loves_cats. All rights reserved.
-                    </p>
+            </div>
+            <footer class="page_end">
+                        <p>
+                            © 2023 nick_loves_cats. All rights reserved.
+                        </p>
                 </footer>
+        </main>
+    </div>
 </body>
 </html>

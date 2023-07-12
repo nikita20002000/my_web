@@ -19,3 +19,11 @@ def pixel_town(request):
 
 def help_me(request):
     return render(request, 'main/help.html')
+
+
+def my_repos(request):
+    return render(request, 'main/repos.html')
+
+
+def apps(request):
+    return render(request, 'main/apps.html')

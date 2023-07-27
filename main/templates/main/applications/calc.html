@@ -1,0 +1,126 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'main/css/applications_css/calc.css' %}">
+    <script src="https://kit.fontawesome.com/29c67175bf.js" crossorigin="anonymous"></script>
+    <style>a {text-decoration: none;}</style>
+</head>
+<body>
+    <header id="header" class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #aa9ad2">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    MeCoding.ru
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
+                    aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav me-auto mb-3 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="{% url 'home' %}" class="nav-link">Main</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'about_me' %}" class="nav-link">Readme</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'news_home' %}" class="nav-link">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'apps' %}" class="nav-link active">Apps</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'pixel_town' %}" class="nav-link">Pixel_town</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'contact_page' %}" class="nav-link">Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'help_me' %}" class="nav-link">Help</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section id="hero" class="d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <h1>Калькулятор</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container1">
+            <div class="row centered">
+                <div class="calc text-wrap">
+                    <div class="calc-screen text-wrap" style="border: 4px solid white;">
+                        <p style="">0</p>
+                    </div>
+                    <div class="buttons">
+                        <div class="btnc ln bg-grey">ln</div>
+                        <div class="btnc ac bg-grey">ac</div>
+                        <div class="btnc plus-minus bg-grey">+/-</div>
+                        <div class="btnc percent bg-grey">%</div>
+                        <div class="btnc division bg-grey">/</div>
+
+                        <div class="btnc log bg-grey">log</div>
+                        <div class="btnc seven">7</div>
+                        <div class="btnc eight">8</div>
+                        <div class="btnc nine">9</div>
+                        <div class="btnc myl bg-orange">X</div>
+
+                        <div class="btnc root bg-grey">√</div>
+                        <div class="btnc four">4</div>
+                        <div class="btnc five">5</div>
+                        <div class="btnc six">6</div>
+                        <div class="btnc minus bg-orange">-</div>
+
+                        <div class="btnc square bg-grey">Х²</div>
+                        <div class="btnc one">1</div>
+                        <div class="btnc two">2</div>
+                        <div class="btnc three">3</div>
+                        <div class="btnc plus bg-orange">+</div>
+
+                        <div class="btnc cube bg-grey">X³</div>
+                        <div class="btnc zero">0</div>
+                        <div class="btnc dot">.</div>
+                        <div class="btnc equal bg-orange">=</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer class=" text-center " style="background-color:#aa9ad2;">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <section class="mb-4">
+          <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+          <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i class="fab fa-google"></i></a>
+          <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+          <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+          <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!" role="button"><i class="fab fa-github"></i></a>
+        </section>
+      </div>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); font-family: 'amstrad'">
+        © 2023 MeCoding.ru All rights reserved.
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src={% static "main/js/applications_js/calc.js" %}></script>
+</body>
+</html>

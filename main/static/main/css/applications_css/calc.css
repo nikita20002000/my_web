@@ -1,0 +1,237 @@
+html, body {
+    height: 100%;
+    background-color: #dbcffb;
+}
+
+
+
+
+
+.navbar-dark .navbar-brand {
+    color: #5757e5;
+    font-family: "3dventure";
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #5757e5;
+    font-family: "amstrad";
+    font-size: 1rem;
+}
+#hero {
+    width: 100%;
+    background-color: #dbcffb;
+}
+
+
+#hero:before {
+    content: "";
+    position: absolute;
+
+    /*top: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+}
+
+#hero .container {
+    position: relative;
+    padding-top: 8vh;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+#hero h1 {
+    margin: 0;
+    font-family: "rus_amstrad";
+    font-weight: 700;
+    line-height: 64px;
+    font-size: calc(2px + 2.5vw);
+    color: #5757e5;
+}
+
+#hero p {
+    margin: 0;
+    font-family: "rus_amstrad";
+    font-weight: 700;
+    line-height: 64px;
+    font-size: calc(2px + 1.5vw);
+    color: #5757e5;
+}
+
+
+@media screen and (max-width: 540px) {
+        #hero h1 {
+        margin: 20px;
+        font-family: "rus_amstrad";
+        font-weight: 700;
+        line-height: 30px;
+        font-size: calc(9px + 2.5vw);
+        color: #5757e5;
+    }
+
+
+    #hero .container {
+    position: relative;
+    padding-top: 100px;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    }
+
+    .container1 {
+    margin-top: 50px;
+    margin-right: 25px;
+    margin-left: 25px;
+    }
+
+}
+
+
+@media screen and (max-width: 4000px) and (min-width: 1000px) {
+    #hero h1 {
+        margin: -10px;
+        font-family: "rus_amstrad";
+        font-weight: 700;
+        line-height: 64px;
+        font-size: calc(4px + 2.5vw);
+        color: #5757e5;
+    }
+
+
+    #hero .container {
+    position: relative;
+    padding-top: 100px;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    }
+
+    .container1 {
+        margin: 150px 25px 270px;
+    }
+
+}
+
+
+
+.calc {
+    border-radius: 20px;
+    background: #5757e5;
+    font-family: "amstrad", "rus_amstrad";
+    padding: 18px;
+    box-shadow: 4px 4px 4px #4f4f4f;
+    color: aliceblue;
+}
+
+.calc-screen {
+    height: 150px;
+    padding: 10px;
+    display: grid;
+    justify-items: end;
+    align-items: end;
+    margin-bottom: 25px;
+    background-color: #3a3ac1;
+}
+
+.calc-screen p {
+    text-align: right;
+    font-size: 4rem;
+    margin: 0;
+}
+
+
+.buttons {
+    display: grid;
+    grid-template-areas:
+    "ln ac plus-minus persent division"
+    "log seven eight nine myl"
+    "root four five six minus"
+    "square onr two three plus"
+    "cube zero zero dot equal";
+    grid-gap: 7px;
+    justify-items: center;
+}
+
+.btnc {
+    width: 60px;
+    height: 60px;
+    background: #333;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btnc.zero {
+    grid-area: zero;
+    width: 100%;
+    border-radius: 34px;
+}
+
+.btnc:hover {
+    filter: brightness(120%);
+}
+
+.btnc:active {
+    filter: brightness(90%);
+}
+
+
+.btnc.bg-grey {
+    background: #A6A6A6;
+}
+
+
+.btnc.bg-orange {
+    background: coral ;
+}
+
+
+
+
+.border-top {
+    border-top: 4px solid #5757e5!important;
+}
+footer {
+    margin-top: 80px;
+    background-color: #aa9ad2;
+    align-items: flex-end;
+}
+.page-footer {
+    margin-top: 40px!important;
+}
+
+.footer-copyright {
+    border-top: 1px solid #5757e5!important;
+    font-family: "amstrad";
+    color: #5757e5;
+}
+
+@font-face {
+    font-family: "amstrad";
+    src: url("../../fonts/amstrad/amstrad.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "rus_amstrad";
+    src: url("../../fonts/rus_amstrad/rus_amstrad.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+
+}
+
+@font-face {
+    font-family: "3dventure";
+    src: url("../../fonts/3dventure/3dventure1.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+
+}

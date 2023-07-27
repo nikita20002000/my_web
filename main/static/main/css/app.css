@@ -1,6 +1,3 @@
-html {
-    position: relative;
-}
 html, body {
     height: 100%;
     background-color: #dbcffb;
@@ -34,10 +31,10 @@ html, body {
 #hero:before {
     content: "";
     position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
+
+    /*top: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
 }
 
 #hero .container {
@@ -48,51 +45,44 @@ html, body {
     text-align: center;
 }
 
-.c {
-    padding-top: 35px;
-    padding-bottom: 35px;
-
-}
-
-.c h4 {
+#hero h1 {
+    margin: 0;
     font-family: "rus_amstrad";
-    margin-top: 10px;
-    font-size: 20px;
+    font-weight: 700;
+    line-height: 64px;
+    font-size: calc(2px + 2.5vw);
     color: #5757e5;
 }
 
-.c i {
-    color: #5757e5;
-    width: 20px;
-
-}
-
-.c p {
+#hero p {
+    margin: 0;
     font-family: "rus_amstrad";
-    color: #8366bd;
-    font-size: 15px;
+    font-weight: 700;
+    line-height: 64px;
+    font-size: calc(2px + 1.5vw);
+    color: #5757e5;
 }
 
+#cube {
+    margin-top: 60px;
+}
 
-/*Экран смартфона*/
 @media screen and (max-width: 540px) {
-    #hero h1 {
-        margin: -10px;
+        #hero h1 {
+        margin: 20px;
         font-family: "rus_amstrad";
         font-weight: 700;
         line-height: 30px;
-        font-size: calc(8px + 2.5vw);
+        font-size: calc(9px + 2.5vw);
         color: #5757e5;
     }
 
-    .w img {
-        margin-top: 40px;
-        height: 150px;
-        width: 150px;
-    }
-
-    #sec_info {
-        margin-top: 80px;
+    .container1 {
+    position: relative;
+    margin: 100px auto;
+    width: 210px;
+    height: 210px;
+    perspective: 500px;
     }
 }
 
@@ -105,65 +95,30 @@ html, body {
         line-height: 64px;
         font-size: calc(4px + 2.5vw);
         color: #5757e5;
-
     }
-    .w img {
-    margin-top: 40px;
+
+    .container1 {
+        position: relative;
+        margin: 200px auto;
+        width: 300px;
+        height: 300px;
+        perspective: 500px;
+    }
 }
+
+#programs {
+    font-family: "rus_amstrad", "amstrad";
 }
 
 
-
-
-.wrapper{
+#app_name {
     color: #5757e5;
-    margin-top: 100px;
-    position: center;
-    margin-bottom: 100px;
-
+    margin-bottom: 1em;
 }
 
-.wrapper a{
-    line-height: 40px;
-    font-size: 18px;
-    font-family: "rus_amstrad";
-    text-decoration: none;
-    color: #5757e5;
-    border: 2px solid #5757e5;
-    letter-spacing: 2px;
-    text-align: center;
-    position: relative;
-    transition: all .35s;
-}
-
-.wrapper a span{
-    position: relative;
-     z-index: 2;
-}
-
-.wrapper a:after{
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #5757e5;
-  transition: all .35s;
-}
-
-.wrapper a:hover{
-  color: #fff;
-}
-
-.wrapper a:hover:after{
-  width: 100%;
-}
-
-.wrapper p {
-    font-family: "rus_amstrad";
+#about_app {
+    margin-top: 1em;
     color: #8366bd;
-    font-size: 12px;
 }
 
 
@@ -172,10 +127,12 @@ html, body {
     border-top: 4px solid #5757e5!important;
 }
 
+
+
 footer {
     background-color: #aa9ad2;
     align-items: flex-end;
-    bottom: 0;
+    /*bottom: 0;*/
     width: 100%;
 }
 

@@ -1,0 +1,127 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'main/css/applications_css/coding_ipsum.css' %}">
+    <script src="https://kit.fontawesome.com/29c67175bf.js" crossorigin="anonymous"></script>
+    <style>a {text-decoration: none;}</style>
+</head>
+<body>
+    <header id="header" class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #aa9ad2">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    MeCoding.ru
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
+                    aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav me-auto mb-3 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="{% url 'home' %}" class="nav-link">Main</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'about_me' %}" class="nav-link">Readme</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'news_home' %}" class="nav-link">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'apps' %}" class="nav-link active">Apps</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'pixel_town' %}" class="nav-link">Pixel_town</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'contact_page' %}" class="nav-link">Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'help_me' %}" class="nav-link">Help</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section id="hero" class="d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <h1>Coding Ipsum</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about_lorem">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-center my-3" >
+                    <h2>Что такое Lorem Ipsum?</h2>
+                    <p><strong>Coding Ipsum</strong> - это текст-"рыба", который широко используется в печати и вэб-дизайне. Coding Ipsum является одной из версий оригинального сервиса Lorem Ipsum.
+                        На официальном сайте говорится, что в то время существовал один безымянный печатник, который создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+                        Сейчас Lorem Ipsum успешно перешел печатную эру и скакнул в электронный дизайн. </p>
+
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-center my-3">
+                    <h2>Почему он используется?</h2>
+                    <p>Ни для кого не секрет, наилучшей оценке дизайна мешает читаемый текст.
+                    Coding Ipsum можно использовать для стандартного заполнения шаблона англоязычным несвязным
+                        текстом. Многие программы электронной верстки используют Lorem Ipsum
+                    в качестве текста по умолчанию.
+                    С Coding Ipsum конечно так не получится, но он все равно может быть вам полезен!</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-center my-3">
+                    <h2>Откуда он появился?</h2>
+                    <p>Корни Lorem Ipsum уходят в один фрагмент классической латыни
+                    45 года Н.Э., более двух тысячелетий назад. У Coding Ipsum же нет такой длинной и увлекательной истории.
+                    Он был создан как один из вариантов оригинального Lorem.</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-center my-3">
+                    <h2>Где его взять?</h2>
+                    <p>Как известно, существует множество различных вариаций и
+                    модификаций, к примеру эта). Если вам нужен оригинальный Lorem Ipsum для серьезного проекта, советую воспользоваться сайтом <a href="https://ru.lipsum.com/" style="color: #5757e5">https://ru.lipsum.com. </a>https://ru.lipsum.com.
+                    В других же случаях можно опробовать и данную версию!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="main_app">
+        <div class="container1">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center" >
+                    <form class="lorem-form">
+                        <label for="amount">Напиши количество слов</label>
+                        <input name="amount" id="amount"/>
+                        <button type="submit" class="btn" style="color: #5757e5; border: 3px solid #5757e5">Генерировать</button>
+                        <button id="copyT" style="color: #5757e5; border: 3px solid #5757e5">Скопировать</button>
+                    </form>
+            <article class="lorem-text" id="output"></article>
+        </div>
+    </section>
+
+    <footer class=" text-center " style="background-color:#aa9ad2;">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <section class="mb-4">
+          <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+          <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i class="fab fa-google"></i></a>
+          <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+          <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+          <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!" role="button"><i class="fab fa-github"></i></a>
+        </section>
+      </div>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); font-family: 'amstrad'">
+        © 2023 MeCoding.ru All rights reserved.
+      </div>
+    </footer>
+<script src="{% static 'main/js/applications_js/coding_ipsum.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

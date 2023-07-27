@@ -27,3 +27,19 @@ def my_repos(request):
 
 def apps(request):
     return render(request, 'main/apps.html')
+
+
+def coding_ipsum(request):
+    return render(request, 'main/applications/coding_ipsum.html')
+
+
+def weather_app(request):
+    return render(request, 'main/applications/weather.html')
+
+
+def calc_app(request):
+    return render(request, 'main/applications/calc.html')
+
+
+def snake_me(request):
+    return render(request, 'main/applications/cat_snake.html')

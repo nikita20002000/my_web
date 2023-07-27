@@ -1,0 +1,12 @@
+.name {
+    margin: 50px auto;
+    width: 500px;
+    height: 300px;
+
+    border-radius: 20px;
+
+    font-family: "fantasy";
+    font-size: 56px;
+    padding: 18px;
+    color: blue;
+}

@@ -34,7 +34,6 @@ html, body {
 #hero:before {
     content: "";
     position: absolute;
-    bottom: 0;
     top: 0;
     left: 0;
     right: 0;
@@ -47,125 +46,93 @@ html, body {
     margin: 0;
     text-align: center;
 }
+.w {
+    margin-bottom: 80px;
+}
+.w p{
+    color: #5757e5;
+    margin: 8vh 5% 4vh 5%;
+    font-family: "amstrad";
+    font-family: "rus_amstrad";
+    box-shadow: 0 0 0 6px #5757e5, 0 0 0 8px #dbcffb, 0 0 0 20px #5757e5;
+}
 
 .c {
-    padding-top: 35px;
-    padding-bottom: 35px;
-
+    margin-bottom: 120px;
 }
 
-.c h4 {
-    font-family: "rus_amstrad";
-    margin-top: 10px;
-    font-size: 20px;
-    color: #5757e5;
-}
 
-.c i {
-    color: #5757e5;
-    width: 20px;
 
-}
 
-.c p {
-    font-family: "rus_amstrad";
-    color: #8366bd;
-    font-size: 15px;
-}
 
 
 /*Экран смартфона*/
 @media screen and (max-width: 540px) {
     #hero h1 {
-        margin: -10px;
+        margin: 20px;
         font-family: "rus_amstrad";
         font-weight: 700;
         line-height: 30px;
-        font-size: calc(8px + 2.5vw);
+        font-size: calc(9px + 2.5vw);
         color: #5757e5;
     }
 
-    .w img {
-        margin-top: 40px;
-        height: 150px;
-        width: 150px;
-    }
-
-    #sec_info {
-        margin-top: 80px;
-    }
+    .c p {
+    color: #5757e5;
+    font-family: "amstrad";
+    font-family: "rus_amstrad";
+    box-shadow: 0 0 0 6px #5757e5, 0 0 0 8px #dbcffb, 0 0 0 20px #5757e5;
+    margin-bottom: 120px;
+    font-size: 14px;
 }
+
+}
+
 
 
 @media screen and (max-width: 4000px) and (min-width: 541px) {
     #hero h1 {
-        margin: -10px;
+        margin: 0;
         font-family: "rus_amstrad";
         font-weight: 700;
         line-height: 64px;
-        font-size: calc(4px + 2.5vw);
+        font-size: calc(5px + 2.5vw);
         color: #5757e5;
 
     }
+
     .w img {
-    margin-top: 40px;
-}
-}
+        margin-top: 40px;
+        height: 300px;
+        width: 480px;
+    }
 
-
-
-
-.wrapper{
+    .c p {
     color: #5757e5;
-    margin-top: 100px;
-    position: center;
-    margin-bottom: 100px;
-
-}
-
-.wrapper a{
-    line-height: 40px;
-    font-size: 18px;
+    font-family: "amstrad";
     font-family: "rus_amstrad";
-    text-decoration: none;
-    color: #5757e5;
-    border: 2px solid #5757e5;
-    letter-spacing: 2px;
-    text-align: center;
-    position: relative;
-    transition: all .35s;
+    box-shadow: 0 0 0 6px #5757e5, 0 0 0 8px #dbcffb, 0 0 0 20px #5757e5;
+    margin-bottom: 120px;
+    font-size: 25px;
+}
 }
 
-.wrapper a span{
-    position: relative;
-     z-index: 2;
-}
 
-.wrapper a:after{
-  position: absolute;
-  content: "";
+
+
+
+
+
+#particles-js{
+  position: fixed;
+    width: 100%;
+    height: 100%;
   top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #5757e5;
-  transition: all .35s;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  overflow: hidden;
 }
-
-.wrapper a:hover{
-  color: #fff;
-}
-
-.wrapper a:hover:after{
-  width: 100%;
-}
-
-.wrapper p {
-    font-family: "rus_amstrad";
-    color: #8366bd;
-    font-size: 12px;
-}
-
 
 
 .border-top {
@@ -179,11 +146,7 @@ footer {
     width: 100%;
 }
 
-.footer-copyright {
-    border-top: 1px solid #5757e5!important;
-    font-family: "amstrad";
-    color: #5757e5;
-}
+
 
 
 @font-face {

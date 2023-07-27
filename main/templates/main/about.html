@@ -2,85 +2,126 @@
 <!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>
-            Главная страница
-    </title>
-
-    <style>
-            a {
-            text-decoration: none;
-            }
-    </style>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'main/css/about.css' %}">
     <script src="https://kit.fontawesome.com/29c67175bf.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="right">
-            <aside>
-            <img src="{% static 'main/img/cat_gif.gif' %}" alt="Лого">
-
-
-            <ul>
-                <a href="{% url 'home' %}"><li><i class="fa-solid fa-house fa-beat-fade"></i> main()</li></a>
-                <a href="{% url 'about_me' %}"><li><i class="fa-regular fa-user fa-beat-fade"></i> README</li></a>
-                <a href="{% url 'news_home' %}"><li><i class="fa-solid fa-newspaper fa-beat-fade"></i> news</li></a>
-                <a href="{% url 'repos' %}"><li><i class="fa-solid fa-folder fa-beat-fade"></i> my_repo</li></a>
-                <a href="{% url 'apps' %}"><li><i class="fa-solid fa-list fa-beat-fade"></i> apps</li></a>
-                <a href="{% url 'pixel_town' %}"><li><i class="fa-solid fa-heart fa-beat"></i> pixel_town</li></a>
-                <a href="{% url 'contact_page' %}"><li><i class="fa-regular fa-id-card fa-beat-fade"></i> contacts</li></a>
-                <a href="{% url 'help_me' %}"><li><i class="fa-solid fa-circle-dollar-to-slot fa-beat-fade"></i> -h</li></a>
-            </ul>
-            <style>
+    <style>
                 a {
                 text-decoration: none;
                 }
             </style>
-        </aside>
-            <main>
-                <div class="features">
-                    <img src="{% static 'main/img/retro_pc_README.gif' %}" alt="">
-                    <h1>
-                        Обо мне
-                    </h1>
+</head>
+<body>
+    <header id="header" class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #aa9ad2">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    MeCoding.ru
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
+                    aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav me-auto mb-3 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="{% url 'home' %}" class="nav-link">Main</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'about_me' %}" class="nav-link active">Readme</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'news_home' %}" class="nav-link">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'apps' %}" class="nav-link">Apps</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'pixel_town' %}" class="nav-link">Pixel_town</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'contact_page' %}" class="nav-link">Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'help_me' %}" class="nav-link">Help</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="info_ab_me_1">
-                    <img src="{% static 'main/img/first_nick_gif.gif' %}" alt="">
-                    <div class="main_text1">
-                        <p>
-                               Я закончил Московский Государственный Технический Университет "СТАНКИН" по направлению автоматизации технологических процессов и производств, а на данный момент
-                            обучаюсь в Московском Государственном Университете имени М.В. Ломоносова по направлению искусственного интеллекта. Помимо этого я параллельно обучаюсь по направлению
-                            мастера делового администрирования MBA в МГУ на кафедре Государственного управления
-                        </p>
+            </div>
+        </nav>
+        </header>
+    <section id="hero" class="d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <h1>Обо мне</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container w">
+            <div class="row centered">
+                <div class="col-lg-12">
+                    <div class="text-center">
+                        <img src="{% static 'main/img/retro_pc_README.gif' %}" class="img-fluid" alt="...">
                     </div>
                 </div>
-                <div class="info_ab_me_2">
-                    <div class="main_text2">
-                        <p>
-                            В университете я увлекался различными дисциплинами связанными с математикой, физикой и анализом данных и с годами, наконец, пришел в программирование. Для меня это что-то большее, чем сфера деятельности
-                            , это скорее то, чем я готов заниматься даже в свое свободное время. На данный момент я развиваюсь в напрвлениях Back-end разработки, Data-science, машинном обучении,
-                            а также верстки сайтов :). Моими основными языками программирования можно считать PYTHON, JAVA и C#
-                        </p>
-                    </div>
-                    <img src="{% static 'main/img/second_nick_gif.gif' %}" alt="">
-                </div>
-                <p id="final_text">
-                    Я постоянно прокачиваю свои навыки программирования, изучаю что-то новое, читаю техническую литературу. Каждая решенная задача мотивирует меня заниматься этим делом дальше и совершенствоваться все больше и больше. Ниже вы можете скачать и ознакомиться с моим резюме
-                </p>
-                <div class="wrapper">
-                    <a href="{% static 'main/files/nov_n.pdf' %}" download><span>Скачать резюме</span></a>
-                </div>
-                <footer class="page_end">
-                    <p>
-                © 2023 nick_loves_cats. All rights reserved.
-            </p>
-                </footer>
-            </main>
+            </div>
     </div>
+    <div class="container c">
+        <div class="row centered text-center">
+            <br><br>
+            <div class="col-lg-6">
+                <i class="fa-solid fa-building-columns fa-beat-fade fa-2xl"></i>
+                <h4>Мое образование</h4>
+                <p>  Я закончил Московский Государственный Технический Университет "СТАНКИН" по направлению автоматизации технологических процессов и производств, а на данный момент
+                            обучаюсь в Московском Государственном Университете имени М.В. Ломоносова по направлению искусственного интеллекта. Помимо этого я параллельно обучаюсь по направлению
+                            мастера делового администрирования MBA в МГУ на кафедре Государственного управления</p>
+            </div>
+            <div class="col-lg-6">
+                <i class="fa-solid fa-briefcase fa-beat-fade fa-2xl" id="sec_info"></i>
+                <h4>Деятельность</h4>
+                <p>  Я специализируюсь на разработке Desktop приложений на языках Python и Java. Есть опыт написания программ в Android Studio и разработки Веб-сайтов. Я также развиваюсь в сфере Data-science
+                    и машинном обучении. Я постоянно прокачиваю свои навыки программирования, изучаю что-то новое, читаю техническую литературу. Каждая решенная задача мотивирует меня заниматься этим делом дальше и совершенствоваться все больше и больше.
+                    Ниже вы можете скачать и ознакомиться с моим резюме</p>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="col-lg-12 me-2">
+            <div class="wrapper">
+                <a href="{% static 'main/files/nov_n.pdf' %}" download><span>Скачать резюме</span></a>
+                <p>Клик сюда</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer text-center font-small mt-4">
+        <div class="pt-4"></div>
+            <div class="pb-4">
+                <a href="">
+                    <i class="fa-brands fa-facebook me-3" style="color: #5757e5"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-square-instagram me-3" style="color: #5757e5"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-vk me-3" style="color: #5757e5"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-linkedin me-3" style="color: #5757e5"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-telegram me-3" style="color: #5757e5"></i>
+                </a>
+            </div>
+            <div class="footer-copyright py-3">© 2023 MeCoding.ru All rights reserved.</div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src={% static "main/js/main.js" %}></script>
 </body>
 </html>

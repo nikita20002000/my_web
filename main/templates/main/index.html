@@ -2,125 +2,116 @@
 <!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>
-            Главная страница
-    </title>
-
-    <style>
-            a {
-            text-decoration: none;
-            }
-    </style>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
     <script src="https://kit.fontawesome.com/29c67175bf.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="right">
-        <aside>
-            <img src="{% static 'main/img/cat_gif.gif' %}" alt="Лого">
-
-
-            <ul>
-                <a href="{% url 'home' %}"><li><i class="fa-solid fa-house fa-beat-fade"></i> main()</li></a>
-                <a href="{% url 'about_me' %}"><li><i class="fa-regular fa-user fa-beat-fade"></i> README</li></a>
-                <a href="{% url 'news_home' %}"><li><i class="fa-solid fa-newspaper fa-beat-fade"></i> news</li></a>
-                <a href="{% url 'repos' %}"><li><i class="fa-solid fa-folder fa-beat-fade"></i> my_repo</li></a>
-                <a href="{% url 'apps' %}"><li><i class="fa-solid fa-list fa-beat-fade"></i> apps</li></a>
-                <a href="{% url 'pixel_town' %}"><li><i class="fa-solid fa-heart fa-beat"></i> pixel_town</li></a>
-                <a href="{% url 'contact_page' %}"><li><i class="fa-regular fa-id-card fa-beat-fade"></i> contacts</li></a>
-                <a href="{% url 'help_me' %}"><li><i class="fa-solid fa-circle-dollar-to-slot fa-beat-fade"></i> -h</li></a>
-            </ul>
-            <style>
+    <style>
                 a {
                 text-decoration: none;
                 }
             </style>
-        </aside>
-        <main>
-            <div class="features">
-                <h1 id="nickname">
-                    nick_loves_cats
-                </h1>
+</head>
+<body>
+    <header id="header" class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #aa9ad2">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    MeCoding.ru
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
+                    aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav me-auto mb-3 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="{% url 'home' %}" class="nav-link active">Main</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'about_me' %}" class="nav-link">Readme</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'news_home' %}" class="nav-link">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'apps' %}" class="nav-link">Apps</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'pixel_town' %}" class="nav-link">Pixel_town</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'contact_page' %}" class="nav-link">Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'help_me' %}" class="nav-link">Help</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="main_info">
-                <img src="{% static 'main/img/main_page_neither.png' %}" alt="">
-                <p id="main_text_1">
-                    Привет! Я рад приветствовать тебя на моей собственной ВЕБ-странице. Здесь представлено множество возможностей и функций, которые в будущем будут совершенствоваться и пополнятся. Мой блог от начала и до конца посвящен программированию!<br><br>
-                    ( ° ∀ ° )ﾉﾞ<br>
-                </p>
-                <p id="main_text_2">
-                    Что внутри
-                </p>
+        </nav>
+        </header>
+    <section id="hero" class="d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <h1>Здесь про программирование</h1>
+                    <p class="text-justify" id="hero_p"> Сайт для разработчиков и не только! </p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12" id="cube">
+                    <div class="container1">
+                        <div class="cube">
+                            <div class="side front"><p id="side_name">Блог</p></div>
+                            <div class="side back"><p  id="side_name">Pixel Town!</p></div>
+                            <div class="side toright"><p  id="side_name">Мои проекты</p></div>
+                            <div class="side left"><p  id="side_name">Приложения</p></div>
+                            <div class="side top"><p  id="side_name">Информация обо мне</p></div>
+                            <div class="side bottom"><p  id="side_name">Новости</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12" id="arrows">
+                    <div class="arrows">
+                        <img id="arrows" src="{% static 'main/img/key_arrows.png' %}" alt="">
+                        <h2>
+                            Используй это
+                        </h2>
+                    </div>
+                </div>
             </div>
-            <div class="info_1">
-                <img src="{% static 'main/img/win_sys_er.png' %}" alt="">
-                <p id="ab_me_in">
-                    Информация обо мне
-                </p>
-                <p id="ab_me_in_text">
-                    В разделе README вы найдете информацию обо мне, моем образовании и увлечениях!
-                </p>
-            </div>
-            <div class="info_2">
-                <p id="news_in_text">
-                    Раздел news будет постоянно пополняться различными гайдами, советами и новостями по программированию, а также по моим нынешним проектам!
-                </p>
-                <img src="{% static 'main/img/win_sys_er.png' %}" alt="">
-                <p id="news_in">
-                    Новости и обновления
-                </p>
-            </div>
-            <div class="info_3">
-                <img src="{% static 'main/img/win_sys_er.png' %}" alt="">
-                <p id="repo">
-                    Мои проекты
-                </p>
-                <p id="repo_in_text">
-                    my_repo посвящен всем моим нынешним и будущим проектам. Здесь будет отображаться информация по текущим репозиториям с объяснением их работы и ссылками на Github
-                </p>
-            </div>
-            <div class="info_4">
-                <p id="apps_in_text">
-                    В этом разделе вы найдете все доступные функции и приложения. Игры, обработка текста и многое другое ждут вас в этом разделе!
-                </p>
-                <img src="{% static 'main/img/win_sys_er.png' %}" alt="">
-                <p id="apps_in">
-                    Приложения
-                </p>
-            </div>
-            <div class="info_5">
-                <img src="{% static 'main/img/win_sys_er.png' %}" alt="">
-                <p id="contacts">
-                    Контакты
-                </p>
-                <p id="contacts_in_text">
-                    В разделе contacts есть вся информация для связи со мной. Хотите сотрудничать?! Вам сюда!
-                </p>
-            </div>
-            <div class="info_6">
-                <p id="h_in_text">
-                    Я просто должен был сделать эту вкладку... Она ни к чему не обязывает, но претендует на существование :)
-                </p>
-                <img src="{% static 'main/img/win_sys_er.png' %}" alt="">
-                <p id="h_in">
-                    Донаты
-                </p>
-            </div>
-            <div class="final_cat_png">
-                <img src="{% static 'main/img/cat_with_pc_gif.gif' %}" alt="">
-            </div>
-            <footer class="page_end">
-                <p>
-                    © 2023 nick_loves_cats. All rights reserved.
-                </p>
-        </footer>
-        </main>
         </div>
+
+
+    </section>
+    <footer class="page-footer text-center font-small">
+            <div class="pt-4">
+
+            </div>
+            <div class="pb-4">
+                <a href="">
+                    <i class="fa-brands fa-facebook me-3" style="color: #5757e5"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-square-instagram me-3" style="color: #5757e5"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-vk me-3" style="color: #5757e5"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-linkedin me-3" style="color: #5757e5"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-telegram me-3" style="color: #5757e5"></i>
+                </a>
+            </div>
+            <div class="footer-copyright py-3">
+                © 2023 MeCoding.ru All rights reserved.
+            </div>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src={% static "main/js/main.js" %}></script>
 </body>
 </html>

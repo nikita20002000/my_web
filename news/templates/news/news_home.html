@@ -4,9 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Главная страница</title>
+    <title>Интересное</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'main/css/news.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/Prev_version/news.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/light.css' %}" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="{% static 'main/css/dark.css' %}" media="(prefers-color-scheme: dark)">
     <script src="https://kit.fontawesome.com/29c67175bf.js" crossorigin="anonymous"></script>
     <style>
                 a {
@@ -15,38 +17,34 @@
             </style>
 </head>
 <body>
+    <div id="particles-js"></div>
+    <div id="page-wrapper">
     <header id="header" class="fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2c2c2c">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a href="#" class="navbar-brand">
+                <a href="{% url 'home' %}" class="navbar-brand">
                     MeCoding.ru
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
                     aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navContent">
+                <div class="collapse navbar-collapse flex-grow-0" id="navContent">
                     <ul class="navbar-nav me-auto mb-3 mb-lg-0">
                         <li class="nav-item">
-                            <a href="{% url 'home' %}" class="nav-link">Main</a>
+                            <a href="{% url 'home' %}" class="nav-link active">Главная</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url 'about_me' %}" class="nav-link">Readme</a>
+                            <a href="{% url 'news_home' %}" class="nav-link">Интересное</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url 'news_home' %}" class="nav-link active">News</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{% url 'apps' %}" class="nav-link">Apps</a>
+                            <a href="{% url 'apps' %}" class="nav-link">Приложения</a>
                         </li>
                         <li class="nav-item">
                             <a href="{% url 'pixel_town' %}" class="nav-link">Pixel_town</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url 'contact_page' %}" class="nav-link">Contacts</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{% url 'help_me' %}" class="nav-link">Help</a>
+                            <a href="{% url 'gpt_client' %}" class="nav-link">Консоль</a>
                         </li>
                     </ul>
                 </div>
@@ -57,62 +55,137 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                    <h1>Новости</h1>
+                    <h1>Интересное</h1>
                 </div>
             </div>
         </div>
     </section>
-    <main>
-        <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://img.freepik.com/premium-vector/pixel-art-game-background-grass-sky-and-clouds_210544-60.jpg?w=2000" class="d-block w-100 h-40" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://img.freepik.com/free-vector/black-and-white-pixels-background-in-flat-style_1017-27177.jpg?w=2000&t=st=1689629631~exp=1689630231~hmac=eaf624567b382aaa516e89961b72535cfab013ef628de497cf45c57b576b83a5" class="d-block w-100 h-40" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://img.freepik.com/free-vector/arcade-game-world-and-pixel-scene_24640-45908.jpg?w=2000&t=st=1689629649~exp=1689630249~hmac=7cfe22aa4caa685fb651c513590e279ee98737345a067730fd869c087075e169" class="d-block w-100 h-40" alt="...">
-                </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Предыдущий</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Следующий</span>
-  </button>
-</div>
-    </main>
-    <div class="container c">
-        <div class="row centered text-center">
-                    <div class="col-lg-12">
-                        <h3 id="title_news">Сайт запущен</h3>
-                        <p id="news_intro">Состоялся релиз сайта</p>
-                        <div class="wrapper">
-                            <a href="{% url 'first_one' %}"  id="btn_watch"><span>Смотреть</span></a>
+    <div class="main-container">
+            <div class="main-header anim" style="--delay: 0s">Новинки</div>
+
+            <div class="main-blogs">
+                <div class="main-blog anim img-fluid" style="--delay: .1s">
+                    <a href="#">
+                        <div class="main-blog__title">Пишем простое веб-приложение на Python c нуля c библиотекой PyWebio
+                        </div>
+                    </a>
+                    <div class="main-blog__author">
+                        <div class="author-img__wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg>
+                            <img class="author-img" src="{% static 'main/img/author.jpg' %}" />
+                        </div>
+                        <div class="author-detail">
+                            <div class="author-name">nikita_vse_po_plany</div>
+                            <div class="author-info">? просмотров <span class="seperate"></span>1 день назад</div>
                         </div>
                     </div>
-        </div>
+                    <div class="main-blog__time">7 мин</div>
+                </div>
+                <div class="main-blog anim" style="--delay: .2s">
+                    <div class="main-blog__title">Твоя первая нейросеть с нуля</div>
+                    <div class="main-blog__author tips">
+                        <div class="main-blog__time">10 мин</div>
+                        <div class="author-img__wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg>
+                            <img class="author-img" src="{% static 'main/img/author.jpg' %}" />
+                        </div>
+                        <div class="author-detail">
+                            <div class="author-name">nikita_vse_po_plany</div>
+                            <div class="author-info">53K просмотров <span></span>2 дня назад</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="small-header anim" style="--delay: .3s">Не упусти</div>
+            <div class="videos">
+                <div class="video anim" style="--delay: .4s">
+                    <div class="video-time">8 мин</div>
+                    <div class="video-wrapper">
+                        <div class="news_img">
+                            <img src="https://cojo.ru/wp-content/uploads/2022/12/novozemelskii-severnyi-olen-2.webp" class="img-fluid" alt="Responsive image">
+                        </div>
+                        <div class="author-img__wrapper video-author">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg>
+                            <img class="author-img" src="{% static 'main/img/author.jpg' %}"/>
+                        </div>
+                    </div>
+                    <div class="video-by">nikita_vse_po_plany</div>
+                    <div class="video-name"> Топ 10 интересных программ для разработчиков</div>
+                    <div class="video-view">? просмотров<span class="seperate video-seperate"></span>неделю назад</div>
+                </div>
+                <div class="video anim" style="--delay: .5s">
+                    <div class="video-time">5 мин</div>
+                    <div class="video-wrapper">
+                        <div class="news_img">
+                            <img src="https://cojo.ru/wp-content/uploads/2022/12/novozemelskii-severnyi-olen-2.webp" class="img-fluid" alt="Responsive image">
+                        </div>
+                        <div class="author-img__wrapper video-author">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg>
+                            <img class="author-img" src="{% static 'main/img/author.jpg' %}"  />
+                        </div>
+                    </div>
+                    <div class="video-by offline">nikita_vse_po_plany</div>
+                    <div class="video-name">Bootstrap - лучшее решение для адаптива веб страницы!</div>
+                    <div class="video-view">42K просмотров<span class="seperate video-seperate"></span>неделю назад</div>
+                </div>
+                <div class="video anim" style="--delay: .6s">
+                    <div class="video-time">7 мин</div>
+                    <div class="video-wrapper">
+                        <div class="news_img">
+                            <img src="https://belon.club/uploads/posts/2023-04/1681293561_belon-club-p-smeshnaya-gorilla-pinterest-2.jpg" class="img-fluid" alt="Responsive image">
+                        </div>
+                        <div class="author-img__wrapper video-author">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg>
+                            <img class="author-img" src="{% static 'main/img/author.jpg' %}"  />
+                        </div>
+                    </div>
+                    <div class="video-by offline">nikita_vse_po_plany</div>
+                    <div class="video-name">Третья проверочная новость</div>
+                    <div class="video-view">64K просмотров<span class="seperate video-seperate"></span>2 недели назад</div>
+                </div>
+                <div class="video anim" style="--delay: .7s">
+                    <div class="video-time">2 мин</div>
+                    <div class="video-wrapper">
+                        <div class="news_img">
+                            <a href="{% url 'first_one' %}"><img src="{% static 'main/img/1news/concept_1.png' %}" class="img-fluid" alt="Responsive image"></a>
+                        </div>
+                        <div class="author-img__wrapper video-author">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg>
+                            <img class="author-img" src="{% static 'main/img/author.jpg' %}"  />
+                        </div>
+                    </div>
+                    <div class="video-by">nikita_vse_po_plany</div>
+                    <div class="video-name">Эволюция дизайна страницы mecoding.ru</div>
+                    <div class="video-view">10 просмотров<span class="seperate video-seperate"></span>неделю назад</div>
+                </div>
+            </div>
     </div>
-    <footer class=" text-center " style="background-color:#2c2c2c;">
+    <footer class=" text-center ">
       <!-- Grid container -->
-      <div class="container p-4">
-        <section>
-          <a class="btn btn-primary btn-floating m-1" style="background-color: #2c2c2c" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
-          <a class="btn btn-primary btn-floating m-1" style="background-color: #2c2c2c" href="#!" role="button"><i class="fab fa-twitter"></i></a>
-          <a class="btn btn-primary btn-floating m-1" style="background-color: #2c2c2c" href="#!" role="button"><i class="fab fa-google"></i></a>
-          <a class="btn btn-primary btn-floating m-1" style="background-color: #2c2c2c" href="#!" role="button"><i class="fab fa-instagram"></i></a>
-          <a class="btn btn-primary btn-floating m-1" style="background-color: #2c2c2c" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
-          <a class="btn btn-primary btn-floating m-1" style="background-color: #2c2c2c" href="#!" role="button"><i class="fab fa-github"></i></a>
-        </section>
-      </div>
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); font-family: 'amstrad'; color: #ffffff ">
         © 2023 MeCoding.ru All rights reserved.
       </div>
     </footer>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src={% static "main/js/main.js" %}></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src={% static "main/js/back-effect.js" %}></script>
 </body>
 </html>

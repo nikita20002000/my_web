@@ -112,7 +112,7 @@ html, body {
 
 
 #weatherBlock {
-    margin-top: 100px;
+
     margin-bottom: 150px;
 }
 
@@ -238,7 +238,6 @@ html, body {
 
 
     #weatherBlock {
-    margin-top: 100px;
     margin-bottom: 150px;
     }
 }
@@ -268,7 +267,7 @@ html, body {
     }
 
     #weatherBlock {
-    margin-top: 50px;
+
     margin-bottom: 75px;
     }
 
@@ -338,3 +337,4 @@ footer {
     font-weight: normal;
 
 }
+

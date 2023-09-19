@@ -1,0 +1,12 @@
+:root {
+    --back-color-1: -webkit-linear-gradient(180deg, #a4c2d1,#528aa4);
+    --back-color-2:  linear-gradient(180deg, #a4c2d1,#528aa4);
+
+
+    --font-color1: #407188;
+    --header-color: #407188;
+
+    --coding-green: #00FF00;
+
+    --cube-color: #00FF00;
+}

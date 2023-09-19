@@ -1,111 +1,169 @@
-(function () {
-    let rotateY = 0,
-        rotateX = 0;
+jQuery(document).ready(function () {
 
-    document.onkeydown = function (e) {
-            if (e.keyCode === 37) rotateY -= 8;
-        else if (e.keyCode === 38) rotateX += 8
-        else if (e.keyCode === 39) rotateY += 8
-        else if (e.keyCode === 40) rotateX -= 8
+ particlesJS.load('particles-js', '/static/main/js/particles.json', function (){
+   console.log('successfully')
+ });
 
-        document.querySelector('.cube').style.transform =
-            'rotateY(' + rotateY + 'deg)' +
-            'rotateX(' + rotateX + 'deg)';
+});
+
+
+
+class NavigationPage {
+  constructor() {
+    this.currentId = null;
+    this.currentTab = null;
+    this.tabContainerHeight = 70;
+    this.lastScroll = 0;
+    let self = this;
+    $(".nav-tab").click(function () {
+      self.onTabClick(event, $(this));
+    });
+    $(window).scroll(() => {
+      this.onScroll();
+    });
+    $(window).resize(() => {
+      this.onResize();
+    });
+  }
+
+  onTabClick(event, element) {
+    event.preventDefault();
+    let scrollTop =
+      $(element.attr("href")).offset().top - this.tabContainerHeight + 1;
+    $("html, body").animate({ scrollTop: scrollTop }, 600);
+  }
+
+  onScroll() {
+    this.checkHeaderPosition();
+    this.findCurrentTabSelector();
+    this.lastScroll = $(window).scrollTop();
+  }
+
+  onResize() {
+    if (this.currentId) {
+      this.setSliderCss();
     }
-})();
+  }
 
-
-
-var
-    outputConsole = document.querySelector(".output-console");
-
-
-outputConsole.style.height = (window.innerHeight / 3) * 2 + 'px';
-outputConsole.style.top = window.innerHeight / 3 + 'px'
-
-
-
-
-
-
-
-/* fake console stuff */
-var commandStart = ['Performing DNS Lookups for',
-        'Searching ',
-        'Analyzing ',
-        'Estimating Approximate Location of ',
-        'Compressing ',
-        'Requesting Authorization From : ',
-        'wget -a -t ',
-        'tar -xzf ',
-        'Entering Location ',
-        'Compilation Started of ',
-        'Downloading '],
-    commandParts = ['Data Structure',
-        'http://wwjd.com?au&2',
-        'Texture',
-        'TPS Reports',
-        ' .... Searching ... ',
-        'http://zanb.se/?23&88&far=2',
-        'http://ab.ret45-33/?timing=1ww'],
-    commandResponses = ['Authorizing ',
-        'Authorized...',
-        'Access Granted..',
-        'Compression Complete.',
-        'Compilation of Data Structures Complete..',
-        'Entering Security Console...',
-        'Encryption Unsuccesful Attempting Retry...',
-        'Waiting for response...',
-        '....Searching...',
-        'Calculating Space Requirements '
-    ],
-    isProcessing = false,
-    processTime = 0,
-    lastProcess = 0;
-
-
-
-
-function consoleOutput(){
-    var textEl = document.createElement('p');
-
-    if(isProcessing){
-        textEl = document.createElement('span');
-        textEl.textContent += Math.random() + " ";
-        if(Date.now() > lastProcess + processTime){
-            isProcessing = false;
-        }
-    }else{
-        var commandType = ~~(Math.random()*4);
-        switch(commandType){
-            case 0:
-                textEl.textContent = commandStart[~~(Math.random()*commandStart.length)] + commandParts[~~(Math.random()*commandParts.length)];
-                break;
-            case 3:
-                isProcessing = true;
-                processTime = ~~(Math.random()*5000);
-                lastProcess = Date.now();
-            default:
-                textEl.textContent = commandResponses[~~(Math.random()*commandResponses.length)];
-                break;
-        }
+  checkHeaderPosition() {
+    const headerHeight = 75;
+    if ($(window).scrollTop() > headerHeight) {
+      $(".nav-container").addClass("nav-container--scrolled");
+    } else {
+      $(".nav-container").removeClass("nav-container--scrolled");
     }
-
-    outputConsole.scrollTop = outputConsole.scrollHeight;
-    outputConsole.appendChild(textEl);
-
-    if (outputConsole.scrollHeight > window.innerHeight) {
-        var removeNodes = outputConsole.querySelectorAll('*');
-        for(var n = 0; n < ~~(removeNodes.length/3); n++){
-            outputConsole.removeChild(removeNodes[n]);
-        }
+    let offset =
+      $(".nav").offset().top +
+      $(".nav").height() -
+      this.tabContainerHeight -
+      headerHeight;
+    if (
+      $(window).scrollTop() > this.lastScroll &&
+      $(window).scrollTop() > offset
+    ) {
+      $(".nav-container").addClass("nav-container--move-up");
+      $(".nav-container").removeClass("nav-container--top-first");
+      $(".nav-container").addClass("nav-container--top-second");
+    } else if (
+      $(window).scrollTop() < this.lastScroll &&
+      $(window).scrollTop() > offset
+    ) {
+      $(".nav-container").removeClass("nav-container--move-up");
+      $(".nav-container").removeClass("nav-container--top-second");
+      $(".nav-container-container").addClass("nav-container--top-first");
+    } else {
+      $(".nav-container").removeClass("nav-container--move-up");
+      $(".nav-container").removeClass("nav-container--top-first");
+      $(".nav-container").removeClass("nav-container--top-second");
     }
+  }
 
-    setTimeout(consoleOutput, ~~(Math.random()*200));
+  findCurrentTabSelector(element) {
+    let newCurrentId;
+    let newCurrentTab;
+    let self = this;
+    $(".nav-tab").each(function () {
+      let id = $(this).attr("href");
+      let offsetTop = $(id).offset().top - self.tabContainerHeight;
+      let offsetBottom =
+        $(id).offset().top + $(id).height() - self.tabContainerHeight;
+      if (
+        $(window).scrollTop() > offsetTop &&
+        $(window).scrollTop() < offsetBottom
+      ) {
+        newCurrentId = id;
+        newCurrentTab = $(this);
+      }
+    });
+    if (this.currentId != newCurrentId || this.currentId === null) {
+      this.currentId = newCurrentId;
+      this.currentTab = newCurrentTab;
+      this.setSliderCss();
+    }
+  }
+
+  setSliderCss() {
+    let width = 0;
+    let left = 0;
+    if (this.currentTab) {
+      width = this.currentTab.css("width");
+      left = this.currentTab.offset().left;
+    }
+    $(".nav-tab-slider").css("width", width);
+    $(".nav-tab-slider").css("left", left);
+  }
 }
 
+new NavigationPage();
+/* Credit and Thanks:
+Matrix - Particles.js;
+SliderJS - Ettrics;
+Design - Sara Mazal Web;
+Fonts - Google Fonts
+*/
 
-setTimeout(function(){
-    consoleOutput();
-}, 200);
+    $(".button-down").click(function () {
+        $('html,body').animate({
+            scrollTop: $(this).parent().next().offset().top
+        }, 'slow');
+        console.log($(this).parent().next())
+    });
+
+
+    $(window).scroll(function(){
+    $(".arrow").css("opacity", 1 - $(window).scrollTop() / 250);
+  //250 is fade pixels
+  });
+
+
+
+
+/* Credit and Thanks:
+Matrix - Particles.js;
+SliderJS - Ettrics;
+Design - Sara Mazal Web;
+Fonts - Google Fonts
+*/
+
+window.onload = function () {
+  Particles.init({
+    selector: ".background"
+  });
+};
+const particles = Particles.init({
+  selector: ".background",
+  color: ["#03dac6", "#ff0266", "#000000"],
+  connectParticles: true,
+  responsive: [
+    {
+      breakpoint: 768,
+      options: {
+        color: ["#faebd7", "#03dac6", "#ff0266"],
+        maxParticles: 43,
+        connectParticles: false
+      }
+    }
+  ]
+});
+
 

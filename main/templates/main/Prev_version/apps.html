@@ -38,7 +38,7 @@
     <header id="header" class="navbar-light fixed-top flex-wrap justify-content-center py-4 mb-4 mx-auto">
             <nav class="navbar navbar-dark navbar-expand-lg ">
 
-                    <a href="/" class="d-flex align-items-center mb-md-0 me-md-auto text-dark text-decoration-none">
+                    <a href="/main/static" class="d-flex align-items-center mb-md-0 me-md-auto text-dark text-decoration-none">
                         <svg xmlns="http://www.w3.org/2000/svg" height="14" width="17.5" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M128 32C92.7 32 64 60.7 64 96V352h64V96H512V352h64V96c0-35.3-28.7-64-64-64H128zM19.2 384C8.6 384 0 392.6 0 403.2C0 445.6 34.4 480 76.8 480H563.2c42.4 0 76.8-34.4 76.8-76.8c0-10.6-8.6-19.2-19.2-19.2H19.2z"/></svg>
                         <span>Mecoding.ru</span>
                     </a>
@@ -52,10 +52,10 @@
                                 <a href="{% url 'home' %}" class="nav-link text-white">Блог</a>
                             </li>
                             <li class="nav-item px-2">
-                                <a href="{% url 'projects' %}" class="nav-link text-white mr-2">Проекты</a>
+                                <a href="{% url 'contact_page' %}" class="nav-link text-white mr-2">Проекты</a>
                             </li>
                             <li class="nav-item px-2">
-                                <a href="{% url 'about_me' %}" class="nav-link is-active text-white">Обо мне</a>
+                                <a href="{% url 'apps' %}" class="nav-link is-active text-white">Обо мне</a>
                             </li>
                             <li class="nav-item mr-2 px-2">
                                 <a href="{% url 'console' %}" class="nav-link text-white">Консоль</a>
@@ -77,7 +77,7 @@
     <div class="divider-small"></div>
 
     <div class="container-fluid author-img mx-auto">
-        <img src="{% static 'main/img/author_pixel_art.jpg'  %}" class="img-fluid" alt="Здесь должен быть крутой pixel art">
+        <img src="{% static 'main/img/author_pixel_art.jpg' %}" class="img-fluid" alt="Здесь должен быть крутой pixel art">
     </div>
 
     <div class="divider-small"></div>

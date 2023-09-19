@@ -1,202 +1,111 @@
-html, body {
-    height: 100%;
-    background: -webkit-linear-gradient(90deg, #000000,#124a49,#0a8494);
-    background: linear-gradient(90deg, #000000,#124a49,#0a8494);
+body {
+    background-color: rgb(10, 11, 24);
+}
+header {
+    background-color: rgb(10, 11, 24);
+    width: 80%;
+}
+header a, button, span {
+    color: #FFFFFF;
+}
+
+header a, span {
+    font-family: monospace;
+    font-size: calc(14px + 8 * (100vw / 1280));
+}
+
+.is-active {
+    text-decoration: underline;
+}
+
+.navbar-nav a {
+    color: #FFFFFF;
+    font-size: calc(14px + 8 * (100vw / 1280));
+}
+
+.heading {
+    margin-top: 50px;
+    width: 80%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.line {
+    position: relative;
+    left: 0;
+    right: 0;
+    border-top: 2px solid #FFFFFF;
 }
 
 
+.divider-small {
+    height: 3rem;
+}
 
+.divider-extra-small {
+    height: 1rem;
+}
+.main-brand-name {
 
-.navbar-dark .navbar-brand {
-    font-family: "3dventure";
-    font-size: 30px;
+}
+.main-brand-name h1 {
+    font-size: 16vw;
+    color: #FFFFFF;
+    font-family: monospace;
+    letter-spacing: 2px;
     font-weight: bold;
 }
 
 
 
 
-.navbar-dark .navbar-nav .nav-link {
-    font-family: "amstrad";
-    font-size: 1rem;
-}
-#hero {
-    width: 100%;
+
+.image-1 {
+    padding-right: 0;
+    padding-left: 0;
 }
 
 
-#hero:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-}
 
-#hero .container {
-    position: relative;
-    padding-top: 8vh;
-    width: 100%;
-    margin: 0;
-    text-align: center;
-}
 
-.c {
-    padding-top: 35px;
-    padding-bottom: 35px;
+.footer {
+    font-family: monospace;
 
 }
 
-.c h4 {
-    font-family: "rus_amstrad";
-    margin-top: 10px;
-    font-size: 20px;
-    color: #ffffff;
+.author-img {
+    padding-right: 0;
+    padding-left: 0;
+    width: 80%;
+    height: 40%;
 }
 
-.c i {
-    color: #ffffff;
-    width: 20px;
-
-}
-
-.c p {
-    font-family: "rus_amstrad";
-    color: #ffffff;
-    font-size: 15px;
+.img-fluid {
+    height: 40%;
 }
 
 
-/*Экран смартфона*/
+
+/*adaptive css*/
 @media screen and (max-width: 540px) {
-    #hero h1 {
-        margin: 20px 20px 0 20px;
-        font-family: "rus_amstrad";
-        font-weight: 700;
-        line-height: 30px;
-        font-size: calc(9px + 3vw);
-        color: #ffffff;
-    }
-
-    .w img {
-        margin-top: 30px;
-        height: 150px;
-        width: 150px;
-    }
-
-    #sec_info {
-        margin-top: 80px;
+    .divider{
+        height: 4rem;
     }
 }
 
-
-@media screen and (max-width: 4000px) and (min-width: 541px) {
-    #hero h1 {
-        margin: 20px 20px 0 20px;
-        font-family: "rus_amstrad";
-        font-weight: 700;
-        line-height: 64px;
-        font-size: calc(4px + 2.5vw);
-        color: #ffffff;
-
+@media screen and (max-width: 768px) and (min-width: 541px) {
+    .divider{
+        height: 6rem;
     }
-    .w img {
-    margin-top: 40px;
 }
-}
-
-
-
-
-.wrapper{
-    color: #ffffff;
-    margin-top: 100px;
-    position: center;
-    margin-bottom: 100px;
-
+@media screen and (max-width: 1000px) and (min-width: 769px) {
+    .divider {
+        height: 6rem;
+    }
 }
 
-.wrapper a{
-    line-height: 40px;
-    font-size: 18px;
-    font-family: "rus_amstrad";
-    text-decoration: none;
-    color: #ffffff;
-    border: 2px solid #ffffff;
-    letter-spacing: 2px;
-    text-align: center;
-    position: relative;
-    transition: all .35s;
-}
-
-.wrapper a span{
-    position: relative;
-     z-index: 2;
-}
-
-.wrapper a:after{
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #ffffff;
-  transition: all .35s;
-}
-
-.wrapper a:hover{
-  color: #fff;
-}
-
-.wrapper a:hover:after{
-  width: 100%;
-}
-
-.wrapper p {
-    font-family: "rus_amstrad";
-    color: #ffffff;
-    font-size: 12px;
-}
-
-
-
-.border-top {
-    border-top: 4px solid #ffffff!important;
-}
-footer {
-    margin-top: 80px;
-    background-color: #2c2c2c;
-    align-items: flex-end;
-}
-
-
-.footer-copyright {
-    border-top: 1px solid #ffffff!important;
-    font-family: "amstrad";
-    color: #ffffff;
-}
-
-
-@font-face {
-    font-family: "amstrad";
-    src: url("../fonts/amstrad/amstrad.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-@font-face {
-    font-family: "rus_amstrad";
-    src: url("../fonts/rus_amstrad/rus_amstrad.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-
-}
-
-@font-face {
-    font-family: "3dventure";
-    src: url("../fonts/3dventure/3dventure1.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-
+@media screen and (max-width: 4000px) and (min-width: 1001px)  {
+    .divider {
+        height: 6rem;
+    }
 }

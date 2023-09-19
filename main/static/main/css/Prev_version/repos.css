@@ -605,13 +605,13 @@ footer p {
 
 @font-face {
     font-family: "amstrad";
-    src: url("../fonts/amstrad/amstrad.ttf") format("truetype");
+    src: url("../../fonts/amstrad/amstrad.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
 @font-face {
     font-family: "rus_amstrad";
-    src: url("../fonts/rus_amstrad/rus_amstrad.ttf") format("truetype");
+    src: url("../../fonts/rus_amstrad/rus_amstrad.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 

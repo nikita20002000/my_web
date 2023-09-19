@@ -23,19 +23,7 @@ header a, span {
     font-size: calc(14px + 8 * (100vw / 1280));
 }
 
-.heading {
-    margin-top: 50px;
-    width: 80%;
-    padding-right: 0;
-    padding-left: 0;
-}
 
-.line {
-    position: relative;
-    left: 0;
-    right: 0;
-    border-top: 2px solid #FFFFFF;
-}
 
 
 .divider-small {
@@ -45,29 +33,27 @@ header a, span {
 .divider-extra-small {
     height: 1rem;
 }
-.main-brand-name {
 
-}
-.main-brand-name h1 {
-    font-size: 16vw;
-    color: #FFFFFF;
-    font-family: monospace;
-    letter-spacing: 2px;
-    font-weight: bold;
-}
-
-.recent {
+.project-name {
     width: 80%;
-
 }
 
-h3, h4 {
+.project-text {
+    width: 80%;
+}
+
+h1, h3, h4 {
     font-family: monospace;
     color: #FFFFFF;
 }
 
-h3 {
+h1 {
     font-weight: bold;
+}
+
+p {
+    font-family: monospace;
+    color: #c0bbbb;
 }
 
 .recent-posts {

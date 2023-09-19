@@ -42,13 +42,9 @@ html, body {
     text-align: center;
     }
     .w {
-        margin: 40px 0 40px 0;
+        margin-bottom: 40px auto;
     }
 
-    .w img {
-        width: 300px;
-        height: 300px;
-    }
 .w p{
     color: #ffffff;
     margin: 8vh 5% 4vh 5%;
@@ -81,10 +77,14 @@ html, body {
         font-family: "amstrad";
         font-family: "rus_amstrad";
 
-        margin-bottom: 120px;
         font-size: 14px;
         z-index: 1;
-}
+    }
+    .w img {
+        margin: 40px 0 40px 0;
+        height: 300px;
+        width: 300px;
+    }
 
 }
 
@@ -102,16 +102,16 @@ html, body {
     }
 
     .w img {
-        margin-top: 40px;
+        margin-top: 40px 0 40px 0;
         height: 300px;
-        width: 300px;
+        width: 480px;
     }
 
     .c p {
     color: #ffffff;
     font-family: "amstrad";
     font-family: "rus_amstrad";
-    margin-bottom: 120px;
+
     font-size: 25px;
         z-index: 1;
 }
@@ -151,13 +151,13 @@ footer {
 
 @font-face {
     font-family: "amstrad";
-    src: url("../fonts/amstrad/amstrad.ttf") format("truetype");
+    src: url("../../fonts/amstrad/amstrad.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
 @font-face {
     font-family: "rus_amstrad";
-    src: url("../fonts/rus_amstrad/rus_amstrad.ttf") format("truetype");
+    src: url("../../fonts/rus_amstrad/rus_amstrad.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 
@@ -165,7 +165,7 @@ footer {
 
 @font-face {
     font-family: "3dventure";
-    src: url("../fonts/3dventure/3dventure1.ttf") format("truetype");
+    src: url("../../fonts/3dventure/3dventure1.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 

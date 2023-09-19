@@ -59,7 +59,7 @@ window.onload = function() {
     bottomPipeImg.src = "/static/main/js/applications_js/bottompipe.png";
 
     requestAnimationFrame(update);
-    setInterval(placePipes, 1500); //every 1.5 seconds
+    setInterval(placePipes, 5000); //every 1.5 seconds
     document.addEventListener("keydown", moveBird);
     mobile_board.addEventListener("touchstart", mobileMoveBird, {passive:false});
 }

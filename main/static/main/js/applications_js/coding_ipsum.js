@@ -135,7 +135,7 @@ const words = [
     "mysterious","nails","name","nation","national","native","natural","naturally",
     "nature","near","nearby","nearer","nearest","nearly","necessary","neck",
     "needed","needle","needs","negative","neighbor","neighborhood","nervous","nest",
-    "never","new","all_news","newspaper","next","nice","night","nine",
+    "never","new","news","newspaper","next","nice","night","nine",
     "no","nobody","nodded","noise","none","noon","nor","north",
     "nose","not","note","noted","nothing","notice","noun","now",
     "number","numeral","nuts","object","observe","obtain","occasionally","occur",
@@ -248,8 +248,6 @@ const words = [
 const form = document.querySelector(".lorem-form");
 const amount = document.getElementById("amount");
 const result = document.querySelector(".lorem-text");
-const copy = document.getElementById("copyT");
-
 
 function getRandomWord(firstLetterToUppercase = false) {
     const word = words[randomNumber(0, words.length - 1)];
@@ -272,18 +270,6 @@ form.addEventListener("submit", function (e) {
     let tempText = generateWords(value);
         tempText = tempText
         result.innerHTML = tempText;
-
-
-function copyText() {
-    result.select();
-    document.execCommand("copyT");
-
-    alert("Текст скопирован");
-
-}
-
-document.querySelector("#copyT").addEventListener("click", copyText)
 });
-
 
 

@@ -7,7 +7,6 @@ html, body {
 
 
 
-
 .navbar-dark .navbar-brand {
     font-family: "3dventure";
     font-size: 30px;
@@ -21,7 +20,6 @@ html, body {
     font-family: "amstrad";
     font-size: 1rem;
 }
-
 #hero {
     width: 100%;
 }
@@ -30,6 +28,8 @@ html, body {
 #hero:before {
     content: "";
     position: absolute;
+    bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
 }
@@ -43,16 +43,24 @@ html, body {
 }
 
 .c {
-    margin-top: 40px;
-    font-family: "rus_amstrad";
+    padding-top: 35px;
+    padding-bottom: 35px;
+
 }
 
-.c #title_news {
+.c h4 {
     font-family: "rus_amstrad";
     margin-top: 10px;
     font-size: 20px;
     color: #ffffff;
 }
+
+.c i {
+    color: #ffffff;
+    width: 20px;
+
+}
+
 .c p {
     font-family: "rus_amstrad";
     color: #ffffff;
@@ -60,9 +68,50 @@ html, body {
 }
 
 
+/*Экран смартфона*/
+@media screen and (max-width: 540px) {
+    #hero h1 {
+        margin: 20px 20px 0 20px;
+        font-family: "rus_amstrad";
+        font-weight: 700;
+        line-height: 30px;
+        font-size: calc(9px + 3vw);
+        color: #ffffff;
+    }
+
+    .w img {
+        margin-top: 30px;
+        height: 150px;
+        width: 150px;
+    }
+
+    #sec_info {
+        margin-top: 80px;
+    }
+}
+
+
+@media screen and (max-width: 4000px) and (min-width: 541px) {
+    #hero h1 {
+        margin: 20px 20px 0 20px;
+        font-family: "rus_amstrad";
+        font-weight: 700;
+        line-height: 64px;
+        font-size: calc(4px + 2.5vw);
+        color: #ffffff;
+
+    }
+    .w img {
+    margin-top: 40px;
+}
+}
+
+
+
 
 .wrapper{
     color: #ffffff;
+    margin-top: 100px;
     position: center;
     margin-bottom: 100px;
 
@@ -73,7 +122,7 @@ html, body {
     font-size: 18px;
     font-family: "rus_amstrad";
     text-decoration: none;
-    color: #00ff00;
+    color: #ffffff;
     border: 2px solid #ffffff;
     letter-spacing: 2px;
     text-align: center;
@@ -93,7 +142,7 @@ html, body {
   left: 0;
   width: 0;
   height: 100%;
-  background: #5757e5;
+  background: #ffffff;
   transition: all .35s;
 }
 
@@ -107,88 +156,38 @@ html, body {
 
 .wrapper p {
     font-family: "rus_amstrad";
-    color: #8366bd;
+    color: #ffffff;
     font-size: 12px;
 }
 
 
 
-.w-100 {
-    width: 80%!important;
-    margin: 0 auto;
-}
-
-
-/*Экран смартфона*/
-@media screen and (max-width: 540px) {
-    #hero h1 {
-        margin: 20px 20px 50px 20px;
-        font-family: "rus_amstrad";
-        font-weight: 700;
-        line-height: 30px;
-        font-size: calc(8px + 3vw);
-        color: #ffffff;
-    }
-
-    .w img {
-        margin-top: 40px;
-        height: 150px;
-        width: 150px;
-    }
-
-    #sec_info {
-        margin-top: 80px;
-    }
-}
-
-
-@media screen and (max-width: 4000px) and (min-width: 541px) {
-    #hero h1 {
-        margin: 20px 20px 50px 20px;
-        font-family: "rus_amstrad";
-        font-weight: 700;
-        line-height: 64px;
-        font-size: calc(4px + 2.5vw);
-        color: #ffffff;
-
-    }
-    .w img {
-    margin-top: 40px;
-}
-}
-
-
-
-
-
-
 .border-top {
-    border-top: 4px solid #5757e5!important;
+    border-top: 4px solid #ffffff!important;
+}
+footer {
+    margin-top: 80px;
+    background-color: #2c2c2c;
+    align-items: flex-end;
 }
 
-footer {
-    background-color: #aa9ad2;
-    align-items: flex-end;
-    bottom: 0;
-    width: 100%;
-}
 
 .footer-copyright {
-    border-top: 1px solid #5757e5!important;
+    border-top: 1px solid #ffffff!important;
     font-family: "amstrad";
-    color: #5757e5;
+    color: #ffffff;
 }
 
 
 @font-face {
     font-family: "amstrad";
-    src: url("../fonts/amstrad/amstrad.ttf") format("truetype");
+    src: url("../../fonts/amstrad/amstrad.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
 @font-face {
     font-family: "rus_amstrad";
-    src: url("../fonts/rus_amstrad/rus_amstrad.ttf") format("truetype");
+    src: url("../../fonts/rus_amstrad/rus_amstrad.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 
@@ -196,7 +195,7 @@ footer {
 
 @font-face {
     font-family: "3dventure";
-    src: url("../fonts/3dventure/3dventure1.ttf") format("truetype");
+    src: url("../../fonts/3dventure/3dventure1.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 

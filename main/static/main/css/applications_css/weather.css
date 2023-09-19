@@ -1,37 +1,129 @@
-* {
-    padding: 0;
+html, body {
+    height: 100%;
+    background: -webkit-linear-gradient(90deg, #000000,#124a49,#0a8494);
+    background: linear-gradient(90deg, #000000,#124a49,#0a8494);
+}
+
+
+
+
+
+.navbar-dark .navbar-brand {
+    font-family: "3dventure";
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+
+
+.navbar-dark .navbar-nav .nav-link {
+    font-family: "amstrad";
+    font-size: 1rem;
+}
+#hero {
+    width: 100%;
+}
+
+
+#hero:before {
+    content: "";
+    position: absolute;
+
+    /*top: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+}
+
+#hero .container {
+    position: relative;
+    padding-top: 8vh;
+    width: 100%;
     margin: 0;
-    box-sizing: border-box;
+    text-align: center;
+}
+
+
+
+
+@media screen and (max-width: 540px) {
+        #hero h1 {
+        margin: 20px 20px 0 20px;
+        font-family: "rus_amstrad";
+        font-weight: 700;
+        line-height: 30px;
+        font-size: calc(9px + 3vw);
+        color: #ffffff;
+    }
+
+
+    #hero .container {
+    position: relative;
+    padding-top: 100px;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    }
+
+    .container1 {
+    margin-top: 50px;
+    margin-right: 25px;
+    margin-left: 25px;
+    }
 
 }
+
+
+@media screen and (max-width: 4000px) and (min-width: 1000px) {
+    #hero h1 {
+        margin: 20px 20px 0 20px;
+        font-family: "rus_amstrad";
+        font-weight: 700;
+        line-height: 64px;
+        font-size: calc(4px + 2.5vw);
+        color: #ffffff;
+    }
+
+
+    #hero .container {
+    position: relative;
+    padding-top: 100px;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    }
+
+    .container1 {
+        margin: 150px 25px 270px;
+    }
+
+}
+
 
 :root {
     --white: #ffffff;
     --off-white: #e5e5e5;
     --transp-white-1: rgba(255, 255, 255, 0.25);
     --transp-white-2: rgba(255, 255, 255, 0.1);
-    --blue-1: #331ba1;
-    --blue-2: #6552b7;
+    --blue-1: #00ff00;
+    --blue-2: #ffffff;
     --shadow: rgba(3, 46, 87, 0.2);
 }
 
-body {
-    height: 100vh;
-    background: linear-gradient(135deg, var(--blue-1), var(--blue-2));
+
+#weatherBlock {
+    margin-top: 100px;
+    margin-bottom: 150px;
 }
 
 .wrapper {
     font-size: 16px;
-    width: 90vw;
-    max-width: 28em;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+    font-family: "amstrad", "rus_amstrad";
 }
 
-.container {
-    width: 100%;
+
+.container2 {
+    width: 80%;
     background: var(--transp-white-2);
     backdrop-filter: blur(10px);
     padding: 3em 1.8em;
@@ -39,28 +131,18 @@ body {
     border-radius: 0.6em;
     box-shadow: 0 1.8em 3.7em var(--shadow);
     text-align: center;
+
 }
+
+
 .shape {
-    position: absolute;
+
     background-color: var(--transp-white-2);
     backdrop-filter: blur(1.2em);
     border: 2px solid var(--transp-white-2);
     border-radius: 50%;
 }
 
-.shape-1 {
-    height: 13em;
-    width: 13em;
-    right: -6.5em;
-    top: 1.8em;
-}
-
-.shape-2 {
-    height: 11em;
-    width: 11em;
-    bottom: -3.7em;
-    left: -2.5em;
-}
 
 .search-container {
     font-size: 1em;
@@ -84,6 +166,7 @@ body {
     font-weight: 300;
 }
 
+
 .search-container input::placeholder {
     color: var(--off-white);
 }
@@ -93,19 +176,22 @@ body {
 }
 
 .search-container button {
-    color: var(--blue-2);
+    color: #00ff00;
     background-color: var(--white);
     border-radius: 0.3em;
 }
 
 
 #result h2 {
-    color: var(--white);
+    color: #00ff00;
     text-transform: uppercase;
     letter-spacing: 0.18em;
     font-weight: 600;
     margin: 1.25em 0;
 }
+
+
+
 
 .weather {
     color: var(--off-white);
@@ -116,9 +202,7 @@ body {
     line-height: 2em;
 }
 
-.weather {
-    margin-top: -0.7em;
-}
+
 
 #result img {
     margin: 0.6em 0 0 0;
@@ -126,13 +210,70 @@ body {
     filter: drop-shadow(0 1.8em 3.7em var(--shadow));
 }
 
-#result h1 {
+
+
+
+@media screen and (max-width: 4000px) and (min-width: 760px) {
+    #result h4 {
+        font-size: 1.5em;
+        margin: 1.5em 0 0.7em 0;
+
+        font-weight: 400;
+        color: #ffffff;
+    }
+    #result h1 {
     font-size: 4em;
     margin: 0.3em 0 0.7em 0;
     line-height: 0;
     font-weight: 400;
-    color: var(--white);
+    color: #00ff00;
+    }
+    .search-container button {
+        font-size: 1.5em;
+    }
+
+    .search-container input {
+        font-size: 1.2em;
+    }
+
+
+    #weatherBlock {
+    margin-top: 100px;
+    margin-bottom: 150px;
+    }
 }
+
+@media screen and (max-width: 758px) {
+    #result h4 {
+        font-size: calc(5px + 2vw);
+        margin: 1.5em 0 0.7em 0;
+
+        font-weight: 400;
+        color: #ffffff;
+    }
+    #result h1 {
+    font-size: calc(10px + 2vw);
+    margin: 0.3em 0 0.7em 0;
+    line-height: 0;
+    font-weight: 400;
+    color: #00ff00;
+    }
+
+    .search-container button {
+        font-size: 0.7em;
+    }
+
+    .search-container input {
+        font-size: 0.7em;
+    }
+
+    #weatherBlock {
+    margin-top: 50px;
+    margin-bottom: 75px;
+    }
+
+}
+
 
 .temp-container {
     display: flex;
@@ -155,4 +296,45 @@ body {
 .temp-container .temp {
     font-weight: 300;
     color: var(--off-white);
+}
+
+
+.border-top {
+    border-top: 4px solid #5757e5!important;
+}
+footer {
+    margin-top: 80px;
+    background-color: #aa9ad2;
+    align-items: flex-end;
+}
+.page-footer {
+    margin-top: 40px!important;
+}
+
+.footer-copyright {
+    border-top: 1px solid #5757e5!important;
+    font-family: "amstrad";
+    color: #5757e5;
+}
+
+@font-face {
+    font-family: "amstrad";
+    src: url("../../fonts/amstrad/amstrad.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "rus_amstrad";
+    src: url("../../fonts/rus_amstrad/rus_amstrad.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+
+}
+
+@font-face {
+    font-family: "3dventure";
+    src: url("../../fonts/3dventure/3dventure1.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+
 }

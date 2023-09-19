@@ -135,7 +135,7 @@ const words = [
     "mysterious","nails","name","nation","national","native","natural","naturally",
     "nature","near","nearby","nearer","nearest","nearly","necessary","neck",
     "needed","needle","needs","negative","neighbor","neighborhood","nervous","nest",
-    "never","new","news","newspaper","next","nice","night","nine",
+    "never","new","all_news","newspaper","next","nice","night","nine",
     "no","nobody","nodded","noise","none","noon","nor","north",
     "nose","not","note","noted","nothing","notice","noun","now",
     "number","numeral","nuts","object","observe","obtain","occasionally","occur",

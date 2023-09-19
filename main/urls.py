@@ -13,4 +13,6 @@ urlpatterns = [
     path('weather', views.weather_app, name='cod_weather'),
     path('calc', views.calc_app, name='cod_calc'),
     path('snake', views.snake_me, name='cod_snake'),
+    path('flappy', views.flappy_cat, name='flappy_cat'),
+    path('news1', views.news_1, name='first_one'),
 ]

@@ -1,4 +1,6 @@
-canvas {
+#game-canvas {
     display: block;
     margin: 0 auto;
+    border: 1px solid #000;
+    background-color: #f0f0f0;
 }

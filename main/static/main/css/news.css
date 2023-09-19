@@ -1,9 +1,7 @@
-html {
-    position: relative;
-}
 html, body {
     height: 100%;
-    background-color: #dbcffb;
+    background: -webkit-linear-gradient(90deg, #000000,#124a49,#0a8494);
+    background: linear-gradient(90deg, #000000,#124a49,#0a8494);
 }
 
 
@@ -11,7 +9,6 @@ html, body {
 
 
 .navbar-dark .navbar-brand {
-    color: #5757e5;
     font-family: "3dventure";
     font-size: 30px;
     font-weight: bold;
@@ -21,21 +18,18 @@ html, body {
 
 
 .navbar-dark .navbar-nav .nav-link {
-    color: #5757e5;
     font-family: "amstrad";
     font-size: 1rem;
 }
+
 #hero {
     width: 100%;
-    background-color: #dbcffb;
 }
 
 
 #hero:before {
     content: "";
     position: absolute;
-    bottom: 0;
-    top: 0;
     left: 0;
     right: 0;
 }
@@ -57,18 +51,18 @@ html, body {
     font-family: "rus_amstrad";
     margin-top: 10px;
     font-size: 20px;
-    color: #5757e5;
+    color: #ffffff;
 }
 .c p {
     font-family: "rus_amstrad";
-    color: #8366bd;
+    color: #ffffff;
     font-size: 15px;
 }
 
 
 
 .wrapper{
-    color: #5757e5;
+    color: #ffffff;
     position: center;
     margin-bottom: 100px;
 
@@ -79,8 +73,8 @@ html, body {
     font-size: 18px;
     font-family: "rus_amstrad";
     text-decoration: none;
-    color: #5757e5;
-    border: 2px solid #5757e5;
+    color: #00ff00;
+    border: 2px solid #ffffff;
     letter-spacing: 2px;
     text-align: center;
     position: relative;
@@ -119,15 +113,21 @@ html, body {
 
 
 
+.w-100 {
+    width: 80%!important;
+    margin: 0 auto;
+}
+
+
 /*Экран смартфона*/
 @media screen and (max-width: 540px) {
     #hero h1 {
-        margin: -10px;
+        margin: 20px 20px 50px 20px;
         font-family: "rus_amstrad";
         font-weight: 700;
         line-height: 30px;
-        font-size: calc(8px + 2.5vw);
-        color: #5757e5;
+        font-size: calc(8px + 3vw);
+        color: #ffffff;
     }
 
     .w img {
@@ -144,12 +144,12 @@ html, body {
 
 @media screen and (max-width: 4000px) and (min-width: 541px) {
     #hero h1 {
-        margin: -10px;
+        margin: 20px 20px 50px 20px;
         font-family: "rus_amstrad";
         font-weight: 700;
         line-height: 64px;
         font-size: calc(4px + 2.5vw);
-        color: #5757e5;
+        color: #ffffff;
 
     }
     .w img {

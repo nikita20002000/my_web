@@ -1,9 +1,7 @@
-html {
-    position: relative;
-}
 html, body {
     height: 100%;
-    background-color: #dbcffb;
+    background: -webkit-linear-gradient(90deg, #000000,#124a49,#0a8494);
+    background: linear-gradient(90deg, #000000,#124a49,#0a8494);
 }
 
 
@@ -11,7 +9,6 @@ html, body {
 
 
 .navbar-dark .navbar-brand {
-    color: #5757e5;
     font-family: "3dventure";
     font-size: 30px;
     font-weight: bold;
@@ -21,20 +18,18 @@ html, body {
 
 
 .navbar-dark .navbar-nav .nav-link {
-    color: #5757e5;
     font-family: "amstrad";
     font-size: 1rem;
 }
 #hero {
     width: 100%;
-    background-color: #dbcffb;
 }
 
 
 #hero:before {
     content: "";
     position: absolute;
-    top: 0;
+
     left: 0;
     right: 0;
 }
@@ -45,16 +40,20 @@ html, body {
     width: 100%;
     margin: 0;
     text-align: center;
-}
-.w {
-    margin-bottom: 80px;
-}
+    }
+    .w {
+        margin: 40px 0 40px 0;
+    }
+
+    .w img {
+        width: 300px;
+        height: 300px;
+    }
 .w p{
-    color: #5757e5;
+    color: #ffffff;
     margin: 8vh 5% 4vh 5%;
     font-family: "amstrad";
     font-family: "rus_amstrad";
-    box-shadow: 0 0 0 6px #5757e5, 0 0 0 8px #dbcffb, 0 0 0 20px #5757e5;
 }
 
 .c {
@@ -69,21 +68,22 @@ html, body {
 /*Экран смартфона*/
 @media screen and (max-width: 540px) {
     #hero h1 {
-        margin: 20px;
+        margin: 20px 20px 0 20px;
         font-family: "rus_amstrad";
         font-weight: 700;
         line-height: 30px;
         font-size: calc(9px + 2.5vw);
-        color: #5757e5;
+        color: #ffffff;
     }
 
     .c p {
-    color: #5757e5;
-    font-family: "amstrad";
-    font-family: "rus_amstrad";
-    box-shadow: 0 0 0 6px #5757e5, 0 0 0 8px #dbcffb, 0 0 0 20px #5757e5;
-    margin-bottom: 120px;
-    font-size: 14px;
+        color: #ffffff;
+        font-family: "amstrad";
+        font-family: "rus_amstrad";
+
+        margin-bottom: 120px;
+        font-size: 14px;
+        z-index: 1;
 }
 
 }
@@ -92,28 +92,28 @@ html, body {
 
 @media screen and (max-width: 4000px) and (min-width: 541px) {
     #hero h1 {
-        margin: 0;
+        margin: 20px 20px 0 20px;
         font-family: "rus_amstrad";
         font-weight: 700;
         line-height: 64px;
         font-size: calc(5px + 2.5vw);
-        color: #5757e5;
+        color: #ffffff;
 
     }
 
     .w img {
         margin-top: 40px;
         height: 300px;
-        width: 480px;
+        width: 300px;
     }
 
     .c p {
-    color: #5757e5;
+    color: #ffffff;
     font-family: "amstrad";
     font-family: "rus_amstrad";
-    box-shadow: 0 0 0 6px #5757e5, 0 0 0 8px #dbcffb, 0 0 0 20px #5757e5;
     margin-bottom: 120px;
     font-size: 25px;
+        z-index: 1;
 }
 }
 
@@ -136,7 +136,7 @@ html, body {
 
 
 .border-top {
-    border-top: 4px solid #5757e5!important;
+    border-top: 4px solid #ffffff!important;
 }
 
 footer {

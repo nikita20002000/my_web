@@ -12,7 +12,7 @@
 </head>
 <body>
     <header id="header" class="fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #aa9ad2">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2c2c2c">
             <div class="container">
                 <a href="#" class="navbar-brand">
                     MeCoding.ru
@@ -24,7 +24,7 @@
                 <div class="collapse navbar-collapse" id="navContent">
                     <ul class="navbar-nav me-auto mb-3 mb-lg-0">
                         <li class="nav-item">
-                            <a href="{% url 'home' %}" class="nav-link">Main</a>
+                            <a href="{% url 'home' %}" class="nav-link active">Main</a>
                         </li>
                         <li class="nav-item">
                             <a href="{% url 'about_me' %}" class="nav-link">Readme</a>
@@ -33,7 +33,7 @@
                             <a href="{% url 'news_home' %}" class="nav-link">News</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url 'apps' %}" class="nav-link active">Apps</a>
+                            <a href="{% url 'apps' %}" class="nav-link">Apps</a>
                         </li>
                         <li class="nav-item">
                             <a href="{% url 'pixel_town' %}" class="nav-link">Pixel_town</a>
@@ -48,7 +48,7 @@
                 </div>
             </div>
         </nav>
-    </header>
+        </header>
     <section id="hero" class="d-flex align-items-center justify-content-center">
         <div class="container">
             <div class="row justify-content-center">
@@ -85,7 +85,7 @@
                 <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-center my-3">
                     <h2>Где его взять?</h2>
                     <p>Как известно, существует множество различных вариаций и
-                    модификаций, к примеру эта). Если вам нужен оригинальный Lorem Ipsum для серьезного проекта, советую воспользоваться сайтом <a href="https://ru.lipsum.com/" style="color: #5757e5">https://ru.lipsum.com. </a>https://ru.lipsum.com.
+                    модификаций, к примеру эта). Если вам нужен оригинальный Lorem Ipsum для серьезного проекта, советую воспользоваться сайтом <a href="https://ru.lipsum.com/" style="color: #00FF00">https://ru.lipsum.com. </a>https://ru.lipsum.com.
                     В других же случаях можно опробовать и данную версию!</p>
                 </div>
             </div>
@@ -98,26 +98,28 @@
                     <form class="lorem-form">
                         <label for="amount">Напиши количество слов</label>
                         <input name="amount" id="amount"/>
-                        <button type="submit" class="btn" style="color: #5757e5; border: 3px solid #5757e5">Генерировать</button>
-                        <button id="copyT" style="color: #5757e5; border: 3px solid #5757e5">Скопировать</button>
+                        <button type="submit" class="btn" style="color: #FFFFFF; border: 3px solid #00FF00">Генерировать</button>
+                        <button id="copyT" style="color: #00FF00; border: 3px solid #00FF00">Скопировать</button>
                     </form>
-            <article class="lorem-text" id="output"></article>
+                    <article class="lorem-text" id="output"></article>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer class=" text-center " style="background-color:#aa9ad2;">
+    <footer class=" text-center " style="background-color:#2c2c2c;">
       <!-- Grid container -->
       <div class="container p-4">
-        <section class="mb-4">
-          <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
-          <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i class="fab fa-twitter"></i></a>
-          <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i class="fab fa-google"></i></a>
-          <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fab fa-instagram"></i></a>
-          <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
-          <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!" role="button"><i class="fab fa-github"></i></a>
+        <section>
+          <a class="btn btn-primary btn-floating m-1" style="background-color: #2c2c2c" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-primary btn-floating m-1" style="background-color: #2c2c2c" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+          <a class="btn btn-primary btn-floating m-1" style="background-color: #2c2c2c" href="#!" role="button"><i class="fab fa-google"></i></a>
+          <a class="btn btn-primary btn-floating m-1" style="background-color: #2c2c2c" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+          <a class="btn btn-primary btn-floating m-1" style="background-color: #2c2c2c" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+          <a class="btn btn-primary btn-floating m-1" style="background-color: #2c2c2c" href="#!" role="button"><i class="fab fa-github"></i></a>
         </section>
       </div>
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); font-family: 'amstrad'">
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); font-family: 'amstrad'; color: #ffffff ">
         © 2023 MeCoding.ru All rights reserved.
       </div>
     </footer>

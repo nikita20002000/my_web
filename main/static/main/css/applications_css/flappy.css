@@ -1,0 +1,153 @@
+html, body {
+    height: 100%;
+    background: -webkit-linear-gradient(90deg, #000000,#124a49,#0a8494);
+    background: linear-gradient(90deg, #000000,#124a49,#0a8494);
+}
+
+body {
+    text-align: center;
+}
+
+
+
+
+.navbar-dark .navbar-brand {
+    font-family: "3dventure";
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+
+
+.navbar-dark .navbar-nav .nav-link {
+    font-family: "amstrad";
+    font-size: 1rem;
+}
+#hero {
+    width: 100%;
+}
+
+
+#hero:before {
+    content: "";
+    position: absolute;
+
+    /*top: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+}
+
+#hero .container {
+    position: relative;
+    padding-top: 8vh;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+
+
+
+@media screen and (max-width: 540px) {
+        #hero h1 {
+        margin: 20px 20px 0 20px;
+        font-family: "rus_amstrad";
+        font-weight: 700;
+        line-height: 30px;
+        font-size: calc(10px + 3vw);
+        color: #ffffff;
+    }
+
+
+    #hero .container {
+    position: relative;
+    padding-top: 100px;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    }
+
+    .container1 {
+    margin-top: 50px;
+    margin-right: 25px;
+    margin-left: 25px;
+    }
+
+}
+
+
+@media screen and (max-width: 4000px) and (min-width: 1000px) {
+    #hero h1 {
+        margin: 20px 20px 0 20px;
+        font-family: "rus_amstrad";
+        font-weight: 700;
+        line-height: 64px;
+        font-size: calc(4px + 2.5vw);
+        color: #ffffff;
+    }
+
+
+    #hero .container {
+    position: relative;
+    padding-top: 100px;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    }
+
+    .container1 {
+        margin: 50px 25px 50px;
+    }
+
+}
+
+
+
+
+
+.border-top {
+    border-top: 4px solid #5757e5!important;
+}
+footer {
+    margin-top: 80px;
+    background-color: #aa9ad2;
+    align-items: flex-end;
+}
+.page-footer {
+    margin-top: 40px!important;
+}
+
+.footer-copyright {
+    border-top: 1px solid #5757e5!important;
+    font-family: "amstrad";
+    color: #5757e5;
+}
+
+@font-face {
+    font-family: "amstrad";
+    src: url("../../fonts/amstrad/amstrad.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "rus_amstrad";
+    src: url("../../fonts/rus_amstrad/rus_amstrad.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+
+}
+
+@font-face {
+    font-family: "3dventure";
+    src: url("../../fonts/3dventure/3dventure1.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+
+}
+
+
+#board {
+    background-image: url("Flappy_background.png");
+}
+

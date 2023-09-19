@@ -5,7 +5,7 @@ from django.views.generic import DetailView, UpdateView
 
 def news_home(request):
     news = Articles.objects.order_by('date')
-    return render(request, 'news/news_home.html', {"news": news})
+    return render(request, 'news/news_home.html', {"all_news": news})
 
 
 class NewsDetailView(DetailView):

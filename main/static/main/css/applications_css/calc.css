@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
-    background-color: #dbcffb;
+    background: -webkit-linear-gradient(90deg, #000000,#124a49,#0a8494);
+    background: linear-gradient(90deg, #000000,#124a49,#0a8494);
 }
 
 
@@ -8,7 +9,6 @@ html, body {
 
 
 .navbar-dark .navbar-brand {
-    color: #5757e5;
     font-family: "3dventure";
     font-size: 30px;
     font-weight: bold;
@@ -18,13 +18,11 @@ html, body {
 
 
 .navbar-dark .navbar-nav .nav-link {
-    color: #5757e5;
     font-family: "amstrad";
     font-size: 1rem;
 }
 #hero {
     width: 100%;
-    background-color: #dbcffb;
 }
 
 
@@ -45,33 +43,18 @@ html, body {
     text-align: center;
 }
 
-#hero h1 {
-    margin: 0;
-    font-family: "rus_amstrad";
-    font-weight: 700;
-    line-height: 64px;
-    font-size: calc(2px + 2.5vw);
-    color: #5757e5;
-}
 
-#hero p {
-    margin: 0;
-    font-family: "rus_amstrad";
-    font-weight: 700;
-    line-height: 64px;
-    font-size: calc(2px + 1.5vw);
-    color: #5757e5;
-}
+
 
 
 @media screen and (max-width: 540px) {
         #hero h1 {
-        margin: 20px;
+        margin: 20px 20px 0 20px;
         font-family: "rus_amstrad";
         font-weight: 700;
         line-height: 30px;
-        font-size: calc(9px + 2.5vw);
-        color: #5757e5;
+        font-size: calc(9px + 3vw);
+        color: #ffffff;
     }
 
 
@@ -94,12 +77,12 @@ html, body {
 
 @media screen and (max-width: 4000px) and (min-width: 1000px) {
     #hero h1 {
-        margin: -10px;
+        margin: 20px 20px 0 20px;
         font-family: "rus_amstrad";
         font-weight: 700;
         line-height: 64px;
         font-size: calc(4px + 2.5vw);
-        color: #5757e5;
+        color: #ffffff;
     }
 
 
@@ -121,7 +104,7 @@ html, body {
 
 .calc {
     border-radius: 20px;
-    background: #5757e5;
+    background: #2c2c2c;
     font-family: "amstrad", "rus_amstrad";
     padding: 18px;
     box-shadow: 4px 4px 4px #4f4f4f;
@@ -135,13 +118,14 @@ html, body {
     justify-items: end;
     align-items: end;
     margin-bottom: 25px;
-    background-color: #3a3ac1;
+    background-color: black;
 }
 
 .calc-screen p {
     text-align: right;
     font-size: 4rem;
     margin: 0;
+    color: #00ff00;
 }
 
 

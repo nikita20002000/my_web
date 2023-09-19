@@ -43,3 +43,11 @@ def calc_app(request):
 
 def snake_me(request):
     return render(request, 'main/applications/cat_snake.html')
+
+
+def flappy_cat(request):
+    return render(request, 'main/applications/flappy.html')
+
+
+def news_1(request):
+    return render(request, 'main/all_news/1news.html')

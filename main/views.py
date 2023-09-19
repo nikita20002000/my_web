@@ -51,3 +51,7 @@ def flappy_cat(request):
 
 def news_1(request):
     return render(request, 'main/all_news/1news.html')
+
+
+def interpreter_p(request):
+    return render(request, 'main/applications/interpreter_p.html')

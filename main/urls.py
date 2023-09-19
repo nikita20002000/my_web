@@ -15,4 +15,5 @@ urlpatterns = [
     path('snake', views.snake_me, name='cod_snake'),
     path('flappy', views.flappy_cat, name='flappy_cat'),
     path('news1', views.news_1, name='first_one'),
+    path('interpreter_p', views.interpreter_p, name='interpreter_p'),
 ]

@@ -1,8 +1,7 @@
-html, body {
-    height: 100%;
-    background: -webkit-linear-gradient(90deg, #000000,#124a49,#0a8494);
-    background: linear-gradient(90deg, #000000,#124a49,#0a8494);
-}
+/*html, body {*/
+/*    background: -webkit-linear-gradient(90deg, #000000,#124a49,#0a8494);*/
+/*    background: linear-gradient(90deg, #000000,#124a49,#0a8494);*/
+/*}*/
 
 
 
@@ -352,6 +351,12 @@ span {
     transform: rotateY(460deg) rotateX(220deg);
   }
 }
+
+
+
+
+
+
 
 
 

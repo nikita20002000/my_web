@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 
+
 def index(request):
     return render(request, 'main/index.html', {'title': 'Добро пожаловать!'})
 
@@ -55,3 +56,4 @@ def news_1(request):
 
 def interpreter_p(request):
     return render(request, 'main/applications/interpreter_p.html')
+

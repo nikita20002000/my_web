@@ -90,13 +90,26 @@
     </section>
    <div class="container">
        <iframe
-              src="https://jupyterlite.github.io/demo/repl/index.html?kernel=python&toolbar=1"
+              src="https://jupyterlite.github.io/demo/repl/index.html?theme=JupyterLab Dark"
               width="100%"
               height="500px"
               style="color: #2c2c2c"
             >
         </iframe>
    </div>
+    <label>
+      <input type="checkbox" onchange="changeTheme(this.checked)">
+      Включить темную тему
+    </label>
+    <script>
+      function changeTheme(isChecked) {
+        if (isChecked) {
+          document.body.setAttribute('dark', '');
+        } else {
+          document.body.removeAttribute('dark');
+        }
+      }
+    </script>
 </body>
 
 
@@ -123,3 +136,4 @@
 
 </body>
 </html>
+{#https://jupyterlite.github.io/demo/repl/index.html?theme=JupyterLab Dark?kernel=python&toolbar=1#}

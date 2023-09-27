@@ -1,7 +1,21 @@
 html, body {
     height: 100%;
+    /*background: -webkit-linear-gradient(90deg, #000000,#124a49,#0a8494);*/
+    /*background: linear-gradient(90deg, #000000,#124a49,#0a8494);*/
+}
+:root {
+  background: -webkit-linear-gradient(45deg, #a8edea, #fed6e3);;
+  font-color: black;
+}
+
+[dark] {
     background: -webkit-linear-gradient(90deg, #000000,#124a49,#0a8494);
-    background: linear-gradient(90deg, #000000,#124a49,#0a8494);
+    background: linear-gradient(90deg, #000000,#124a49,#0a8494)
+}
+
+body {
+  background-color: var(--var-bgcolor);
+  color: var(--var-fontcolor);
 }
 
 body {

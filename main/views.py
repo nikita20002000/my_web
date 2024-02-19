@@ -26,23 +26,23 @@ def interpreter(request):
 
 # Устаревшее
 def contacts(request):
-    return render(request, 'main/Prev_version/contacts.html')
+    return render(request, 'main/contacts.html')
 
 
 def pixel_town(request):
-    return render(request, 'main/Prev_version/pixel_town.html')
+    return render(request, 'main/pixel_town.html')
 
 
 def help_me(request):
-    return render(request, 'main/Prev_version/help.html')
+    return render(request, 'main/help.html')
 
 
 def my_repos(request):
-    return render(request, 'main/applications/repos.html')
+    return render(request, 'main/repos.html')
 
 
 def apps(request):
-    return render(request, 'main/Prev_version/apps.html')
+    return render(request, 'main/apps.html')
 
 
 def coding_ipsum(request):

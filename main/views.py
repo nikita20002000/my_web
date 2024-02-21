@@ -23,6 +23,16 @@ def interpreter(request):
     return render(request, 'main/Projects/interpreter.html')
 
 
+def ipsum(request):
+    return render(request, 'main/Projects/ipsum.html')
+
+
+def flappy(request):
+    return render(request, 'main/Projects/flappy.html')
+
+def weather(request):
+    return render(request, 'main/Projects/weather.html')
+
 
 # Устаревшее
 def contacts(request):

@@ -1,17 +1,9 @@
 body {
     background-color: rgb(10, 11, 24);
 }
-header {
-    background-color: rgb(10, 11, 24);
-    width: 80%;
-}
-header a, button, span {
-    color: #FFFFFF;
-}
 
-header a, span {
-    font-family: monospace;
-    font-size: calc(14px + 8 * (100vw / 1280));
+.back-button {
+    margin-top: 50px;
 }
 
 .is-active {
@@ -42,7 +34,7 @@ header a, span {
     width: 80%;
 }
 
-h1, h3, h4 {
+h1, h2, h3, h4 {
     font-family: monospace;
     color: #FFFFFF;
 }
@@ -67,17 +59,19 @@ p {
     padding-left: 0;
 }
 
-.date {
-    font-family: monospace;
-    color: rgb(84,39,185);
-    padding-right: 0;
-    padding-left: 0;
-    font-size: 12px;
-}
 
 .recent-header {
     padding-right: 0;
     padding-left: 0;
+}
+
+/*Специально для Flappy cat*/
+.project-header-flappy {
+    font-family: amstrad;
+}
+
+#board {
+    background-image: url("Flappy_background.png");
 }
 
 .recent-intro {
@@ -127,4 +121,13 @@ p {
     .divider {
         height: 6rem;
     }
+}
+
+
+/*Доп шрифты*/
+@font-face {
+    font-family: "amstrad";
+    src: url("../../fonts/amstrad/amstrad.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }

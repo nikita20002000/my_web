@@ -122,10 +122,10 @@
                 <div class="divider-extra-small"></div>
                 <div class="col-12 col-lg-12">
                     <div class="container recent-header">
-                        <h4>Проверочный проект номер 3</h4>
+                        <h4>Vestrum Анализ рынка</h4>
                     </div>
                     <div class="container recent-intro">
-                        <p class="par-1">Это просто проверочный проект не стоит обращать особого внимания на нее вот и все тут этим сказано Это просто проверочная новость не стоит обращать особого внимания на нее вот и все тут этим сказано</p>
+                        <p class="par-1">Масштабное веб-приложение для анализа рынка товаров с последующим выявление трендов. Внутри встроен ML для генерации потенциально новых продуктов, которые будут соответствовать существующим тенденциям</p>
                     </div>
                 </div>
             </div>
@@ -136,7 +136,7 @@
                 <div class="col-lg-6 p-rl-1 p-b-2">
                      <a href="{% url 'interpreter' %}">
                          <div class="container image-1">
-                        <img src="{% static 'main/img/site_page_wh_zal.png' %}" class="img-fluid rounded" alt="тут должна быть картинка :(">
+                        <img src="{% static 'main/img/projects/python_repl_pic.png' %}" class="img-fluid rounded" alt="тут должна быть картинка :(">
                         </div>
                      </a>
                     <div class="divider-extra-small"></div>
@@ -151,15 +151,56 @@
 
                 </div>
                 <div class="col-lg-6 p-rl-1 p-b-2">
-                    <div class="container image-1">
-                        <img src="{% static 'main/img/site_page_wh_zal.png' %}" class="img-fluid rounded" alt="тут должна быть картинка :(">
-                    </div>
+                    <a href="{% url 'ipsum' %}">
+                        <div class="container image-1">
+                            <img src="{% static 'main/img/projects/coding_ipsum.png' %}" class="img-fluid rounded" alt="тут должна быть картинка :(">
+                        </div>
+                    </a>
                     <div class="divider-extra-small"></div>
                     <div class="container recent-header">
-                        <h3>Ipsum</h3>
+                        <a href="{% url 'ipsum' %}">
+                            <h3>Ipsum</h3>
+                        </a>
                     </div>
                     <div class="container recent-intro">
                         <p class="par-1">Аналог популярного Lorem ipsum. Мини приложение для генерации произвольного количества слов</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider-small"></div>
+
+            <div class="row m-rl--1">
+                <div class="col-lg-6 p-rl-1 p-b-2">
+                    <a href="{% url 'flappy' %}">
+                        <div class="container image-1">
+                            <img src="{% static 'main/img/projects/flappy_cat_pic.png' %}" class="img-fluid rounded" alt="тут должна быть картинка :(">
+                        </div>
+                    </a>
+                    <div class="divider-extra-small"></div>
+                    <div class="container recent-header">
+                        <a href="{% url 'flappy' %}">
+                            <h3>Flappy Cat</h3>
+                        </a>
+                    </div>
+                    <div class="container recent-intro">
+                        <p class="par-1">Браузерная игра в стиле pixel-art </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 p-rl-1 p-b-2">
+                    <a href="{% url 'weather' %}">
+                        <div class="container image-1">
+                            <img src="{% static 'main/img/projects/weather_project_pic.png' %}" class="img-fluid rounded" alt="тут должна быть картинка :(">
+                        </div>
+                    </a>
+                    <div class="divider-extra-small"></div>
+                    <div class="container recent-header">
+                        <a href="{% url 'weather' %}">
+                            <h3>Mecoding Weather App</h3>
+                        </a>
+                    </div>
+                    <div class="container recent-intro">
+                        <p class="par-1">Прогноз погоды</p>
                     </div>
                 </div>
             </div>
@@ -171,7 +212,7 @@
     <footer class=" text-center footer">
           <div class="container p-4"></div>
 
-          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); font-family: 'amstrad'; color: #ffffff ">
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); font-family: monospace; color: #ffffff ">
                 © 2023-2024 MeCoding.ru All rights reserved.
           </div>
     </footer>

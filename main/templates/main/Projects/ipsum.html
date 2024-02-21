@@ -1,0 +1,90 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ipsum</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'main/css/Projects/project.css' %}">
+    <script src="https://kit.fontawesome.com/29c67175bf.js" crossorigin="anonymous"></script>
+    <style>a {text-decoration: none;}</style>
+</head>
+<body>
+    <div class="container back-button">
+        <a href="{% url 'projects' %}">
+            <button type="button my-2" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"></path>
+                        </svg>
+                         Вернуться назад
+            </button>
+        </a>
+    </div>
+    <div class="divider-small"></div>
+    <div class="container-fluid project-name mx-auto">
+        <h1 class="project-header text-center">Coding Ipsum</h1>
+    </div>
+    <div class="divider-small"></div>
+
+    <div class="container project-text mx-auto">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-center my-3" >
+                    <h2>Что такое Coding Ipsum?</h2>
+                    <p><strong>Coding Ipsum</strong> - это текст-"рыба", который широко используется в печати и вэб-дизайне. Coding Ipsum является одной из версий оригинального сервиса Lorem Ipsum.
+                        На официальном сайте говорится, что в то время существовал один безымянный печатник, который создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+                        Сейчас Lorem Ipsum успешно перешел печатную эру и скакнул в электронный дизайн. </p>
+
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-center my-3">
+                    <h2>Почему он используется?</h2>
+                    <p>Ни для кого не секрет, что наилучшей оценке дизайна мешает плохо читаемый текст.
+                    Coding Ipsum можно использовать для стандартного заполнения шаблона англоязычным несвязным
+                        текстом. Многие программы электронной верстки используют Lorem Ipsum
+                    в качестве текста по умолчанию.
+                    С Coding Ipsum конечно так не получится, но он все равно может быть вам полезен!</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-center my-3">
+                    <h2>Откуда он появился?</h2>
+                    <p>Корни Lorem Ipsum уходят в один фрагмент классической латыни
+                    45 года Н.Э., более двух тысячелетий назад. У Coding Ipsum же нет такой длинной и увлекательной истории.
+                    Он был создан как один из вариантов оригинального Lorem.</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-center my-3">
+                    <h2>Где его взять?</h2>
+                    <p>Как известно, существует множество различных вариаций и
+                    модификаций, к примеру эта). Если вам нужен оригинальный Lorem Ipsum для серьезного проекта, советую воспользоваться сайтом <a href="https://ru.lipsum.com/" style="color: #4169da">https://ru.lipsum.com. </a>
+                    В других же случаях можно опробовать и данную версию!</p>
+                </div>
+            </div>
+    </div>
+    <div class="divider-small"></div>
+    <section id="main_app">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center" >
+                    <form class="lorem-form">
+                        <label for="amount" style="color: #FFFFFF">Напиши количество слов</label>
+                        <input name="amount">
+                        <button type="submit" class="btn" style="color: #FFFFFF; border: 3px solid rgb(13, 110, 253)">Генерировать</button>
+                        <button id="copyT" style="color: #FFFFFF; background-color: rgb(0,0,0); border: 3px solid rgb(13, 110, 253)">Скопировать</button>
+                    </form>
+                    <article class="lorem-text" id="output"></article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="divider-small"></div>
+    <footer class=" text-center footer">
+          <div class="container p-4"></div>
+
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); font-family: 'amstrad'; color: #ffffff ">
+                © 2023-2024 MeCoding.ru All rights reserved.
+          </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="{% static 'main/js/applications_js/coding_ipsum.js' %}"></script>
+</body>
+</html>
+

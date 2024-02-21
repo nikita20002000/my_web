@@ -8,6 +8,9 @@ urlpatterns = [
     path('about', views.about, name='about_me'),
     path('console', views.console, name='console'),
     path('interpreter', views.interpreter, name='interpreter'),
+    path('ipsum', views.ipsum, name='ipsum'),
+    path('flappy', views.flappy, name='flappy'),
+    path('weather', views.weather, name='weather'),
 
     # Устаревшие пути сайта
     path('contacts', views.contacts, name='contact_page'),
